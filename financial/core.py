@@ -34,7 +34,7 @@ class ChargerConfig:
     price: float
 
 class ChargingStationFinancials:
-    def __init__(self, config_path: str = "vinfast-charger.json"):
+    def __init__(self, config_path: str = "vinfast-chargers.json"):
         self.charger_configs = self._load_charger_configs(config_path)
         self.electricity_pricing = ElectricityPricing()
 

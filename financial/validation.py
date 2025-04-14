@@ -20,7 +20,7 @@ class SafetyRequirements:
     cooling_system: str = None
 
 class StationValidator:
-    def __init__(self, config_path: str = "vinfast-charger.json"):
+    def __init__(self, config_path: str = "vinfast-chargers.json"):
         self.charger_configs = self._load_charger_configs(config_path)
         self.space_reqs = SpaceRequirements()
 

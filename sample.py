@@ -58,8 +58,8 @@ aux_waste = st.sidebar.checkbox("Hệ thống xử lý rác", value=True)
 aux_solar = st.sidebar.checkbox("Điện mặt trời áp mái", value=True)
 auxiliary = {"restroom": aux_restroom, "waste_management": aux_waste, "solar_installation": aux_solar}
 
-financials = ChargingStationFinancials("vinfast-charger.json")
-validator = StationValidator("vinfast-charger.json")
+financials = ChargingStationFinancials("vinfast-chargers.json")
+validator = StationValidator("vinfast-chargers.json")
 
 revenue_info = financials.calculate_monthly_revenue(
     charger_configs=charger_configs,
