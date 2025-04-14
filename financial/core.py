@@ -1,8 +1,7 @@
 import json
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Any
-from datetime import datetime
-import math
+from typing import Dict, List, Optional, Tuple
+from datetime import datetime, time
 
 @dataclass
 class LoanTerms:
@@ -12,19 +11,69 @@ class LoanTerms:
     start_date: datetime
 
 @dataclass
+class TimeRange:
+    start: time
+    end: time
+
+@dataclass
+class DaySchedule:
+    normal: List[TimeRange]
+    peak: List[TimeRange]
+    off_peak: List[TimeRange]
+
+@dataclass
 class ElectricityPricing:
-    off_peak: float = 1500
-    normal: float = 3200
-    peak: float = 5200
-    vinfast_rate: float = 4200
-    vinfast_subsidy: float = 750
+    normal: float = 1728
+    peak: float = 3116
+    off_peak: float = 1094
+    vinfast_rate: float = 3858 # Keep for potential future use, but revenue calc uses owner_share
+    owner_share_per_kwh: float = 750 # Owner's revenue share from VinFast
+    vinfast_subsidy: float = 0
+    weekday_schedule: DaySchedule = None
+    weekend_schedule: DaySchedule = None
+
+    def __post_init__(self):
+        if not self.weekday_schedule:
+            self.weekday_schedule = DaySchedule(
+                normal=[
+                    TimeRange(time(4, 0), time(9, 30)),
+                    TimeRange(time(11, 30), time(17, 0)),
+                    TimeRange(time(20, 0), time(22, 0))
+                ],
+                peak=[
+                    TimeRange(time(9, 30), time(11, 30)),
+                    TimeRange(time(17, 0), time(20, 0))
+                ],
+                off_peak=[TimeRange(time(22, 0), time(4, 0))]
+            )
+        if not self.weekend_schedule:
+            self.weekend_schedule = DaySchedule(
+                normal=[TimeRange(time(4, 0), time(22, 0))],
+                peak=[],
+                off_peak=[TimeRange(time(22, 0), time(4, 0))]
+            )
+
+# TransformerStation dataclass removed as cost is now calculated based on kW
+
+@dataclass
+class SolarPanelConfig:
+    installed: bool = False
+    capacity_kw: float = 0
+    price_per_kw: float = 15_000_000
 
 @dataclass
 class OperatingCosts:
     land_lease_per_m2: float
-    staff: float
-    maintenance: float
-    other: float
+    staff: float = 10_000_000
+    maintenance: float = 5_000_000
+    other: float = 5_000_000
+    land_lease_deposit_months: int = 6
+    additional_monthly_income: float = 0
+
+@dataclass
+class ChargingTimeConfig:
+    time_limit_minutes: int = 30
+    overage_fee_per_minute: float = 1000
 
 @dataclass
 class ChargerConfig:
@@ -33,11 +82,37 @@ class ChargerConfig:
     power: float
     price: float
 
+@dataclass
+class VehicleModel:
+    name: str
+    battery_capacity: float
+    consumption_per_100km: float
+
 class ChargingStationFinancials:
-    def __init__(self, config_path: str = "vinfast-chargers.json"):
+    def __init__(
+        self,
+        config_path: str = "vinfast-charger.json",
+        # transformer parameter removed
+        solar_config: Optional[SolarPanelConfig] = None,
+        charging_config: Optional[ChargingTimeConfig] = None
+    ):
         self.charger_configs = self._load_charger_configs(config_path)
         self.electricity_pricing = ElectricityPricing()
-
+        # self.transformer removed
+        self.solar_config = solar_config or SolarPanelConfig()
+        self.charging_config = charging_config or ChargingTimeConfig()
+        self.vehicle_models = self._load_vehicle_models()
+    
+    def _load_vehicle_models(self) -> List[VehicleModel]:
+        return [
+            VehicleModel("VinFast VF3", 42, 13.57),
+            VehicleModel("VinFast VF5", 37, 16.0),
+            VehicleModel("VinFast VF6", 60, 15.0),
+            VehicleModel("VinFast VF7", 75, 17.0),
+            VehicleModel("VinFast VF8", 82, 18.5),
+            VehicleModel("VinFast VF9", 95, 20.0)
+        ]
+    
     def _load_charger_configs(self, config_path: str) -> Dict:
         try:
             with open(config_path, 'r', encoding='utf-8') as f:
@@ -46,7 +121,7 @@ class ChargingStationFinancials:
             raise FileNotFoundError(f"Charger config file not found: {config_path}")
         except json.JSONDecodeError:
             raise ValueError(f"Invalid JSON in config file: {config_path}")
-
+    
     def calculate_loan_payments(self, loan: LoanTerms) -> Dict:
         monthly_rate = loan.annual_rate / 12
         payment = loan.principal * (monthly_rate * (1 + monthly_rate)**loan.term_months) / ((1 + monthly_rate)**loan.term_months - 1)
@@ -69,109 +144,169 @@ class ChargingStationFinancials:
             'schedule': schedule
         }
 
-    def calculate_required_area(self, charger_configs: List[ChargerConfig], mounting_type: str) -> float:
+    def calculate_required_area(
+        self,
+        charger_configs: List[ChargerConfig],
+        mounting_type: str,
+        driving_lane_width: float = 6.0
+    ) -> float:
         spot_length = 5.4
         spot_width = 2.5
-        total_spots = sum(config.quantity for config in charger_configs)
+        total_chargers = sum(config.quantity for config in charger_configs)
+        
+        # Simplified layout assumption: single row of spots with one driving lane
+        # More complex layouts would require more detailed parameters
+        
         if mounting_type == "wall":
-            width = spot_width * total_spots
-            length = spot_length
-            area = width * length
+            # Spots side-by-side
+            total_width = spot_width * total_chargers
+            total_length = spot_length + driving_lane_width # Lane runs parallel to spots
+            parking_area = total_width * spot_length
+            lane_area = total_width * driving_lane_width
         elif mounting_type == "side":
+            # Assuming chargers placed between pairs of spots
             charger_spacing = 0.9
-            width = (spot_width * total_spots) + (charger_spacing * (total_spots - 1))
-            length = spot_length
-            area = width * length
-        else:
+            num_pairs = (total_chargers + 1) // 2 # Number of charger units
+            total_width = (spot_width * total_chargers) + (charger_spacing * max(0, num_pairs - 1))
+            total_length = spot_length + driving_lane_width
+            parking_area = total_width * spot_length
+            lane_area = total_width * driving_lane_width
+        else: # rear mounting
             charger_spacing = 1.15
-            width = (spot_width * total_spots) + (charger_spacing * (total_spots - 1))
-            length = spot_length
-            area = width * length
+            total_width = (spot_width * total_chargers) + (charger_spacing * max(0, total_chargers - 1))
+            total_length = spot_length + driving_lane_width
+            parking_area = total_width * spot_length
+            lane_area = total_width * driving_lane_width
+
+        base_area = parking_area + lane_area
+
         total_power = sum(config.power * config.quantity for config in charger_configs)
         transformer_area = 20 if total_power > 560 else 0
-        total_area = (area + transformer_area) * 1.2
+        
+        # Apply overhead and auxiliary area to the calculated base area
+        total_area = (base_area + transformer_area) * 1.2
         auxiliary_area = 30
+        
         return total_area + auxiliary_area
 
     def calculate_monthly_revenue(
         self,
         charger_configs: List[ChargerConfig],
         daily_vehicles_per_charger: int,
-        avg_charge_time: float,
-        peak_hour_ratio: float = 0.3,
-        growth_rate: float = 0,
-        location_factor: float = 1.0,
-        additional_services: float = 0.0
+        avg_charge_time: float
     ) -> Dict:
         total_monthly_kwh = 0
-        total_revenue = 0
-        total_subsidy = 0
+        total_overage_fees = 0
+        
         for config in charger_configs:
             if config.type_name not in self.charger_configs:
                 raise ValueError(f"Unknown charger type: {config.type_name}")
+            
             power_per_charge = config.power * (avg_charge_time / 60)
             daily_kwh_per_charger = daily_vehicles_per_charger * power_per_charge
             monthly_kwh = daily_kwh_per_charger * config.quantity * 30
-            peak_kwh = monthly_kwh * peak_hour_ratio
-            normal_kwh = monthly_kwh * (1 - peak_hour_ratio)
-            revenue = (peak_kwh * self.electricity_pricing.peak +
-                      normal_kwh * self.electricity_pricing.normal)
-            subsidy = monthly_kwh * self.electricity_pricing.vinfast_subsidy
+            
+            # Calculate overage fees
+            if avg_charge_time > self.charging_config.time_limit_minutes:
+                overage_minutes = avg_charge_time - self.charging_config.time_limit_minutes
+                daily_overage = (overage_minutes * self.charging_config.overage_fee_per_minute *
+                               daily_vehicles_per_charger * config.quantity)
+                total_overage_fees += daily_overage * 30
+            
             total_monthly_kwh += monthly_kwh
-            total_revenue += revenue
-            total_subsidy += subsidy
-        base_total = total_revenue + total_subsidy
-        base_total *= location_factor
-        base_total += additional_services
-        monthly_revenues = []
-        months = 12 * 10
-        for month in range(1, months + 1):
-            year = (month - 1) // 12
-            revenue_month = base_total * ((1 + growth_rate/100) ** year)
-            monthly_revenues.append(revenue_month)
+
+        # VinFast pays owner 750 VND/kWh regardless of time of use
+        owner_revenue = total_monthly_kwh * self.electricity_pricing.owner_share_per_kwh
+        
         return {
             'monthly_kwh': total_monthly_kwh,
-            'base_revenue': base_total / 1_000_000,
-            'subsidy': total_subsidy / 1_000_000,
-            'total_revenue': (base_total) / 1_000_000,
-            'monthly_revenues': monthly_revenues
+            'base_revenue': owner_revenue / 1_000_000,
+            'overage_fees': total_overage_fees / 1_000_000,
+            'total_revenue': (owner_revenue + total_overage_fees) / 1_000_000
+        }
+    
+    def calculate_total_investment(
+        self,
+        charger_configs: List[ChargerConfig],
+        required_area: float,
+        operating_costs: OperatingCosts,
+        total_power_kw: float, # Added total power
+        transformer_cost_per_kw: float, # Added cost per kW
+        error_margin: float = 0.1
+    ) -> Dict:
+        charger_costs = sum(config.price * config.quantity for config in charger_configs)
+        # Calculate transformer price based on total power and cost per kW
+        transformer_price = total_power_kw * transformer_cost_per_kw
+        solar_costs = (self.solar_config.capacity_kw * self.solar_config.price_per_kw
+                      if self.solar_config.installed else 0)
+        land_deposit = (operating_costs.land_lease_per_m2 * required_area *
+                       operating_costs.land_lease_deposit_months)
+        
+        base_investment = charger_costs + transformer_price + solar_costs + land_deposit
+        error_amount = base_investment * error_margin
+        
+        return {
+            'charger_costs': charger_costs / 1_000_000,
+            'transformer_cost': transformer_price / 1_000_000,
+            'solar_panel_cost': solar_costs / 1_000_000,
+            'land_deposit': land_deposit / 1_000_000,
+            'error_margin': error_amount / 1_000_000,
+            'total': (base_investment + error_amount) / 1_000_000
         }
 
     def calculate_payback_period(
         self,
-        investment: float,
         monthly_revenue: float,
-        operating_costs: OperatingCosts,
         required_area: float,
+        total_investment: float,
+        total_monthly_kwh: float,
+        electricity_pricing: ElectricityPricing,
+        operating_costs: OperatingCosts,
+        additional_monthly_income: float = 0,
         loan: Optional[LoanTerms] = None
     ) -> Dict:
-        monthly_costs = (
+        # Calculate monthly operating costs without electricity since VinFast pays for it
+        monthly_operating_costs = (
             operating_costs.land_lease_per_m2 * required_area +
             operating_costs.staff +
             operating_costs.maintenance +
             operating_costs.other
         )
+        
+        # Monthly costs are just operating costs since VinFast pays for electricity
+        monthly_costs = monthly_operating_costs
+        
         if loan:
             loan_payment = self.calculate_loan_payments(loan)['monthly_payment']
             monthly_costs += loan_payment
-        monthly_profit = monthly_revenue - monthly_costs
-        if monthly_profit <= 0:
-            return {
-                'payback_months': float('inf'),
-                'payback_years': float('inf'),
-                'monthly_profit': 0,
-                'is_profitable': False,
-                'monthly_costs': monthly_costs / 1_000_000
-            }
-        payback_months = investment / monthly_profit
+
+        # Calculate total monthly income (owner's share from VinFast + additional income)
+        owner_revenue = total_monthly_kwh * electricity_pricing.owner_share_per_kwh
+        total_monthly_income = owner_revenue + additional_monthly_income
+        
+        # Calculate monthly profit
+        monthly_profit = total_monthly_income - monthly_costs
+        
+        # Calculate payback period only if profit is positive
+        if monthly_profit > 0:
+            payback_months = total_investment / monthly_profit
+            is_profitable = True
+        else:
+            payback_months = float('inf')
+            is_profitable = False
+
+        profit_margin = (monthly_profit / total_monthly_income * 100) if total_monthly_income > 0 else 0
         return {
             'payback_months': payback_months,
             'payback_years': payback_months / 12,
             'monthly_profit': monthly_profit / 1_000_000,
             'monthly_costs': monthly_costs / 1_000_000,
-            'is_profitable': True
+            'monthly_operating_costs': monthly_operating_costs / 1_000_000,
+            'monthly_electricity_cost': 0,  # VinFast pays for electricity
+            'is_profitable': is_profitable,
+            'profit_margin': profit_margin
         }
-
+    
     def calculate_risk_metrics(
         self,
         monthly_revenue: float,
@@ -197,7 +332,7 @@ class ChargingStationFinancials:
             scenario_results.append({
                 'scenario': scenario['name'],
                 'profit': profit,
-                'profit_change': (profit - base_profit) / base_profit if base_profit != 0 else 0
+                'profit_change': (profit - base_profit) / base_profit
             })
         return {
             'base_profit': base_profit,
@@ -205,112 +340,3 @@ class ChargingStationFinancials:
             'best_case': max(s['profit'] for s in scenario_results),
             'scenarios': scenario_results
         }
-
-    def calculate_sensitivity_analysis(
-        self,
-        charger_configs: List[ChargerConfig],
-        daily_vehicles_per_charger: int,
-        avg_charge_time: float,
-        peak_hour_ratio: float,
-        charging_price: float,
-        electricity_cost: float,
-        growth_rate: float = 0,
-        location_factor: float = 1.0,
-        additional_services: float = 0.0
-    ) -> Dict:
-        base = self.calculate_monthly_revenue(
-            charger_configs,
-            daily_vehicles_per_charger,
-            avg_charge_time,
-            peak_hour_ratio,
-            growth_rate,
-            location_factor,
-            additional_services
-        )
-        base_revenue = base['total_revenue'] * 1_000_000
-        scenarios_traffic = [0.7, 1.0, 1.3]
-        traffic_results = []
-        for factor in scenarios_traffic:
-            rev = self.calculate_monthly_revenue(
-                charger_configs,
-                int(daily_vehicles_per_charger * factor),
-                avg_charge_time,
-                peak_hour_ratio,
-                growth_rate,
-                location_factor,
-                additional_services
-            )
-            traffic_results.append({
-                'scenario': f"Traffic {int(factor*100)}%",
-                'total_revenue': rev['total_revenue']
-            })
-        scenarios_price = [0.8, 1.0, 1.2]
-        price_results = []
-        for factor in scenarios_price:
-            original_peak = self.electricity_pricing.peak
-            original_normal = self.electricity_pricing.normal
-            self.electricity_pricing.peak = charging_price * factor
-            self.electricity_pricing.normal = charging_price * factor * 0.8
-            rev = self.calculate_monthly_revenue(
-                charger_configs,
-                daily_vehicles_per_charger,
-                avg_charge_time,
-                peak_hour_ratio,
-                growth_rate,
-                location_factor,
-                additional_services
-            )
-            price_results.append({
-                'scenario': f"Price {int(factor*100)}%",
-                'total_revenue': rev['total_revenue']
-            })
-            self.electricity_pricing.peak = original_peak
-            self.electricity_pricing.normal = original_normal
-        scenarios_electricity = [0.85, 1.0, 1.15]
-        elec_results = []
-        for factor in scenarios_electricity:
-            rev = self.calculate_monthly_revenue(
-                charger_configs,
-                daily_vehicles_per_charger,
-                avg_charge_time,
-                peak_hour_ratio,
-                growth_rate,
-                location_factor,
-                additional_services
-            )
-            adjusted_revenue = rev['total_revenue'] * (1 - (factor - 1) * 0.15)
-            elec_results.append({
-                'scenario': f"Electricity Cost {int(factor*100)}%",
-                'total_revenue': adjusted_revenue
-            })
-        return {
-            'traffic_analysis': traffic_results,
-            'price_analysis': price_results,
-            'electricity_cost_analysis': elec_results
-        }
-
-    def calculate_roi(self, investment: float, monthly_revenue: float, operating_costs: OperatingCosts, required_area: float, analysis_years: int = 1) -> float:
-        annual_profit = (monthly_revenue - (operating_costs.land_lease_per_m2 * required_area + operating_costs.staff + operating_costs.maintenance + operating_costs.other)) * 12
-        return (annual_profit / investment) * 100
-
-    def generate_annual_report(self, monthly_revenues: List[float]) -> List[Dict[str, Any]]:
-        annual_report = []
-        total_months = len(monthly_revenues)
-        years = math.ceil(total_months / 12)
-        for year in range(years):
-            start = year * 12
-            end = start + 12
-            year_revenues = monthly_revenues[start:end]
-            annual_report.append({
-                'year': year + 1,
-                'total_revenue': sum(year_revenues),
-                'average_monthly_revenue': sum(year_revenues) / len(year_revenues)
-            })
-        return annual_report
-
-    def suggest_optimal_pole_count(self, estimated_daily_vehicles: int, charger_configs: List[ChargerConfig]) -> int:
-        total_poles = sum(config.quantity for config in charger_configs)
-        optimal = total_poles
-        if estimated_daily_vehicles > total_poles * 10:
-            optimal = math.ceil(estimated_daily_vehicles / 10)
-        return optimal
