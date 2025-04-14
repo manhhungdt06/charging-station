@@ -1,26 +1,44 @@
 [
   {
-    "Mẫu xe": "VinFast VF e34",
-    "Dung lượng pin (kWh)": 42
+    "Mẫu xe": "VinFast VF3",
+    "Dung lượng pin (kWh)": 42,
+    "Mức tiêu thụ (kWh/100km)": 13.57,
+    "Chi phí tại nhà (VND)": 24426,
+    "Chi phí tại trạm (VND)": 40710
   },
   {
     "Mẫu xe": "VinFast VF5",
-    "Dung lượng pin (kWh)": 37
+    "Dung lượng pin (kWh)": 37,
+    "Mức tiêu thụ (kWh/100km)": 16.0,
+    "Chi phí tại nhà (VND)": 28800,
+    "Chi phí tại trạm (VND)": 48000
   },
   {
     "Mẫu xe": "VinFast VF6",
-    "Dung lượng pin (kWh)": 60
+    "Dung lượng pin (kWh)": 60,
+    "Mức tiêu thụ (kWh/100km)": 15.0,
+    "Chi phí tại nhà (VND)": 27000,
+    "Chi phí tại trạm (VND)": 45000
   },
   {
     "Mẫu xe": "VinFast VF7",
-    "Dung lượng pin (kWh)": 75
+    "Dung lượng pin (kWh)": 75,
+    "Mức tiêu thụ (kWh/100km)": 17.0,
+    "Chi phí tại nhà (VND)": 30600,
+    "Chi phí tại trạm (VND)": 51000
   },
   {
     "Mẫu xe": "VinFast VF8",
-    "Dung lượng pin (kWh)": 82
+    "Dung lượng pin (kWh)": 82,
+    "Mức tiêu thụ (kWh/100km)": 18.5,
+    "Chi phí tại nhà (VND)": 33300,
+    "Chi phí tại trạm (VND)": 54600
   },
   {
     "Mẫu xe": "VinFast VF9",
-    "Dung lượng pin (kWh)": 95
+    "Dung lượng pin (kWh)": 95,
+    "Mức tiêu thụ (kWh/100km)": 20.0,
+    "Chi phí tại nhà (VND)": 36000,
+    "Chi phí tại trạm (VND)": 60000
   }
 ]

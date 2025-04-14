@@ -1,0 +1,33 @@
+{
+    "Giá điện (VNĐ/kWh)": {
+      "Giờ bình thường": 3007,
+      "Giờ thấp điểm": 1830,
+      "Giờ cao điểm": 5174
+    },
+    "Khung giờ sử dụng": {
+      "Thứ 2 đến Thứ 7": {
+        "Giờ bình thường": [
+          "04:00 AM - 09:30 AM",
+          "11:30 AM - 05:00 PM",
+          "08:00 PM - 10:00 PM"
+        ],
+        "Giờ cao điểm": [
+          "09:30 AM - 11:30 AM",
+          "05:00 PM - 08:00 PM"
+        ],
+        "Giờ thấp điểm": [
+          "10:00 PM - 04:00 AM"
+        ]
+      },
+      "Chủ nhật": {
+        "Giờ bình thường": [
+          "04:00 AM - 10:00 PM"
+        ],
+        "Giờ cao điểm": [],
+        "Giờ thấp điểm": [
+          "10:00 PM - 04:00 AM"
+        ]
+      }
+    }
+  }
+  
