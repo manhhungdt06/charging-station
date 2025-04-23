@@ -1,6 +1,2 @@
 streamlit
 plotly
-pytest>=7.0.0
-dataclasses>=0.6; python_version < "3.7"
-python-dateutil>=2.8.0  # For datetime handling
-pytest-cov>=4.0.0       # For test coverage reports
