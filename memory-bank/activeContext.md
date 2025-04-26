@@ -1,44 +1,32 @@
-# Active Context
+# Current Active Context
 
-## Current Focus Areas
-1. **Multi-Investor Logic**:
-   - Implementing fair profit distribution calculations
-   - Handling investor withdrawal scenarios
-   - Visualizing individual investor returns
+## Recent Changes (Financial Module):
+- Completed refactoring of core financial calculations
+- Enhanced validation system with safety and space requirements
+- Fixed all warnings and improved type safety
 
-2. **Electricity Prepayment Modeling**:
-   - Working capital requirements
-   - Cash flow impact of 15+ day reimbursement delays
-   - Risk mitigation strategies
+## Current Focus Areas:
+1. **Financial Modeling**:
+   - Working capital requirements for electricity prepayment
+   - Accurate payback period calculations
+   - Comprehensive operating cost tracking
 
-3. **Report Generation**:
-   - Investor-specific PDF reports
-   - Standardized financial statement formats
-   - Vietnamese language support
+2. **Safety & Compliance**:
+   - Emergency stop requirements
+   - Ground fault protection
+   - Temperature monitoring systems
 
-## Recent Changes
-- Added initial multi-investor calculation framework
-- Integrated Vietnamese currency formatting
-- Created base templates for investor reports
-- Added electricity prepayment warning system
+3. **Space Planning**:
+   - Precise area calculations
+   - Safety margin implementation
+   - Mounting type considerations
 
-## Open Questions
-1. How should we handle partial investor withdrawals?
-2. What's the optimal way to model electricity price fluctuations post-2027?
-3. Should reports include comparative benchmarks?
+## Pending Tasks:
+- Integration testing with sample configurations
+- Documentation updates for API changes
+- Performance benchmarking
 
-## Pending Decisions
-1. Finalize investor report template design
-2. Choose between PDF or Excel as primary report format
-3. Determine minimum viable working capital recommendation
-
-## Immediate Next Steps
-1. Complete `calculate_investor_shares()` implementation
-2. Add withdrawal scenario simulation
-3. Prototype PDF report generation
-4. Document electricity prepayment assumptions
-
-## Blockers
-- Need clarification on VinFast's exact reimbursement timeline
-- Awaiting design assets for report templates
-- Pending legal review of disclaimer language
+## Key Decisions:
+- Maintained backward compatibility in all changes
+- Used actual EVN electricity rates as default
+- Added detailed area breakdowns in validation output
