@@ -9,7 +9,9 @@ from financial import (
     LoanTerms,
     ElectricityPricing,
     OperatingCosts,
-    StationValidator
+    StationValidator,
+    Investor,
+    InvestorTerms
 )
 
 financials = ChargingStationFinancials("vinfast-charger.json")
@@ -51,12 +53,103 @@ class ChargerConfig:
 st.sidebar.subheader("Cấu hình trụ sạc")
 charger_configs = []
 
-investment_period = st.sidebar.slider(
-    "Thời gian đầu tư (năm)",
+# Investor configuration
+st.sidebar.subheader("Cấu hình nhà đầu tư")
+total_investment = st.sidebar.number_input(
+    "Tổng vốn đầu tư (triệu VND)",
+    min_value=0.0,
+    value=0.0,
+    step=10.0,
+    key="total_investment"
+) * 1_000_000  # Convert to VND
+
+# total_investment = investment_details['total'] * 1_000_000
+
+num_investors = st.sidebar.number_input(
+    "Số lượng nhà đầu tư",
     min_value=1,
-    max_value=10,
-    value=5
+    max_value=5,
+    value=1,
+    key="num_investors"
 )
+
+investors = []
+for i in range(num_investors):
+    with st.sidebar.expander(f"Nhà đầu tư {i+1}"):
+        name = st.text_input(
+            f"Tên nhà đầu tư {i+1}",
+            value=f"Nhà đầu tư {i+1}",
+            key=f"investor_name_{i}"
+        )
+        default_contrib = round(100 / num_investors)
+        contribution = st.slider(
+            f"Tỷ lệ đóng góp (%)",
+            min_value=0,
+            max_value=100,
+            value=default_contrib,
+            key=f"investor_contribution_{i}"
+        )
+        own_capital = st.slider(
+            f"Tỷ lệ vốn tự có (%)",
+            min_value=0,
+            max_value=100,
+            value=100,
+            key=f"investor_own_capital_{i}"
+        )
+        commitment_years = st.slider(
+            f"Thời gian cam kết đầu tư (năm)",
+            min_value=1,
+            max_value=10,
+            value=5,
+            key=f"investor_commitment_{i}"
+        )
+        
+        # Calculate monetary values
+        total_contribution = total_investment * (contribution / 100)
+        own_amount = total_contribution * (own_capital / 100)
+        borrowed_amount = total_contribution - own_amount
+        
+        st.write(f"Tổng đóng góp: {total_contribution/1_000_000:.2f} triệu VND")
+        st.write(f"Vốn tự có: {own_amount/1_000_000:.2f} triệu VND")
+        st.write(f"Vốn vay: {borrowed_amount/1_000_000:.2f} triệu VND")
+        
+        # Create loan terms if borrowed
+        loan_terms = None
+        if borrowed_amount > 0:
+            loan_rate = st.slider(
+                f"Lãi suất vay (%)",
+                min_value=5.0,
+                max_value=15.0,
+                value=12.0,
+                key=f"investor_loan_rate_{i}"
+            )
+            loan_term = st.slider(
+                f"Thời hạn vay (năm)",
+                min_value=1,
+                max_value=10,
+                value=5,
+                key=f"investor_loan_term_{i}"
+            )
+            loan_terms = LoanTerms(
+                principal=borrowed_amount,
+                annual_rate=loan_rate/100,
+                term_months=loan_term*12,
+                start_date=datetime.now()
+            )
+        
+        investors.append(Investor(
+            name=name,
+            contribution_percent=contribution,
+            own_capital_percent=own_capital,
+            loan_terms=loan_terms,
+            withdrawal_risk=0.0,
+            commitment_years=5
+        ))
+        # After collecting all investors, normalize the percentages
+        total_percent = sum(inv.contribution_percent for inv in investors)
+        if total_percent > 0:  # Avoid division by zero
+            for inv in investors:
+                inv.contribution_percent = (inv.contribution_percent / total_percent) * 100
 
 def get_display_name(full_name):
     if "Link" in full_name:
@@ -99,7 +192,7 @@ with st.sidebar.expander("Tham số nâng cao"):
         "Chi phí biến áp (VND/kW)",
         min_value=1_000_000,
         max_value=5_000_000,
-        value=2_315_000, # Default based on 2500tr / 1080kW
+        value=2_315_000,
         step=50_000,
         key="transformer_cost_per_kw",
         help="Chi phí ước tính cho mỗi kW công suất lắp đặt trạm biến áp."
@@ -117,15 +210,13 @@ with st.sidebar.expander("Tham số nâng cao"):
     
     driving_lane_width = st.number_input(
         "Độ rộng làn xe (m)",
-        min_value=3.0, # Min typical lane width
+        min_value=3.0,
         max_value=10.0,
-        value=6.0, # Default to user's preference
+        value=6.0,
         step=0.5
     )
     
-    # Loan amount is implicitly the total investment
-    loan_amount = 0 # Set to 0, calculated later
-
+    loan_amount = 0
     loan_rate = st.slider(
         "Lãi suất vay (%/năm)",
         min_value=5.0,
@@ -144,19 +235,18 @@ with st.sidebar.expander("Tham số nâng cao"):
 daily_vehicles_per_pole = st.sidebar.slider(
     "Số xe trung bình mỗi trụ mỗi ngày",
     min_value=1,
-    max_value=30, # Increased max value
+    max_value=30,
     value=10
 )
 
 avg_charge_time_input = st.sidebar.slider(
     "Thời gian sạc trung bình (phút)",
     min_value=10,
-    max_value=120, # Max 2 hours
-    value=30, # Default based on previous limit logic
+    max_value=120,
+    value=30,
     step=5
 )
 
-# operation_cost input removed, now broken down into staff, maintenance, other
 additional_monthly_income_input = st.sidebar.number_input(
     "Thu nhập phụ hàng tháng (triệu VND)",
     min_value=0.0,
@@ -170,8 +260,6 @@ if not charger_configs:
     st.error("Vui lòng chọn ít nhất một loại trụ sạc!")
     st.stop()
 
-# Remove the local definition, use the one from financials
-
 required_area = financials.calculate_required_area(
     charger_configs=charger_configs,
     mounting_type=mounting_type,
@@ -179,45 +267,35 @@ required_area = financials.calculate_required_area(
 )
 st.info(f"Diện tích đất cần thiết: {required_area:.1f}m²")
 
-# LoanTerms will be created after total_investment is calculated
 loan = None
-
 monthly_land_cost = land_cost_per_m2 * 1_000 * required_area
 
-# Use the direct input for land_lease_per_m2, converting from thousand VND to VND
 operating_costs = OperatingCosts(
     land_lease_per_m2=land_cost_per_m2 * 1000,
-    staff=10_000_000, # Can be made configurable later if needed
-    maintenance=5_000_000, # Can be made configurable later if needed
-    other=5_000_000 # Can be made configurable later if needed
-    # land_lease_deposit_months remains default (6)
+    staff=10_000_000,
+    maintenance=5_000_000,
+    other=5_000_000
 )
-# Keep monthly_land_cost for display purposes
 monthly_land_cost = (land_cost_per_m2 * 1000) * required_area
-
-# Investment calculation is now handled by calculate_total_investment
 
 revenue = financials.calculate_monthly_revenue(
     charger_configs=charger_configs,
     daily_vehicles_per_charger=daily_vehicles_per_pole,
     avg_charge_time=avg_charge_time_input
 )
-# Extract monthly kWh for cost calculation
-total_monthly_kwh = revenue['monthly_kwh'] # Already in kWh
+total_monthly_kwh = revenue['monthly_kwh']
 
 investment_details = financials.calculate_total_investment(
     charger_configs=charger_configs,
     required_area=required_area,
     operating_costs=operating_costs,
     total_power_kw=total_station_power_kw,
-    transformer_cost_per_kw=transformer_cost_per_kw,
-    # error_margin remains default
+    transformer_cost_per_kw=transformer_cost_per_kw
 )
-total_investment_vnd = investment_details['total'] * 1_000_000 # Convert millions VND to VND
+total_investment_vnd = investment_details['total'] * 1_000_000
 
-# Create LoanTerms using the calculated total investment as principal
 loan = LoanTerms(
-    principal=total_investment_vnd, # Use calculated investment as loan principal
+    principal=total_investment_vnd,
     annual_rate=loan_rate / 100,
     term_months=loan_term * 12,
     start_date=datetime.now()
@@ -227,18 +305,15 @@ loan_calc = financials.calculate_loan_payments(loan)
 monthly_loan_payment = loan_calc['monthly_payment'] / 1_000_000
 
 payback = financials.calculate_payback_period(
-    total_investment=total_investment_vnd, # Pass the value in VND
-    monthly_revenue=revenue['total_revenue'] * 1_000_000, # Pass revenue in VND
+    total_investment=total_investment_vnd,
+    monthly_revenue=revenue['total_revenue'] * 1_000_000,
     operating_costs=operating_costs,
     required_area=required_area,
-    # total_investment already passed as first arg
     total_monthly_kwh=total_monthly_kwh,
     electricity_pricing=financials.electricity_pricing,
-    additional_monthly_income=additional_monthly_income_input * 1_000_000, # Pass additional income in VND
+    additional_monthly_income=additional_monthly_income_input * 1_000_000,
     loan=loan
 )
-
-# monthly_costs is now calculated within payback result
 
 st.header("Kết Quả Dự Đoán")
 col1, col2, col3 = st.columns(3)
@@ -264,10 +339,9 @@ with col1:
     st.write(f"- Phí quá giờ: {revenue['overage_fees']:.2f} triệu VND")
 
 with col2:
-    # Removed the first monthly cost metric as it's redundant / confusing now
-    monthly_op_cost = payback['monthly_operating_costs'] # Excludes electricity and loan
+    monthly_op_cost = payback['monthly_operating_costs']
     monthly_elec_cost = payback['monthly_electricity_cost']
-    total_monthly_cost = payback['monthly_costs'] # Includes op cost, electricity, loan
+    total_monthly_cost = payback['monthly_costs']
 
     loan_display = f"{monthly_loan_payment:.2f}tr" if loan_calc['monthly_payment'] > 0 else "0tr"
 
@@ -286,9 +360,6 @@ with col2:
     )
     st.write(f"Diện tích: {required_area:.1f}m²")
 
-
-    # Removed the separate loan payment metric as it's included above
-
 with col3:
     st.metric(
         "Lợi nhuận hàng tháng",
@@ -304,8 +375,73 @@ with col3:
         f"{payback_years:.2f} năm" if payback['is_profitable'] else "Không hoàn vốn"
     )
     if payback['is_profitable']:
+        investment_period = max(inv.commitment_years for inv in investors)
         st.write("Đánh giá:")
         st.write(f"- {'Khả thi' if payback_years <= investment_period else 'Vượt kỳ vọng'}")
+
+# Investor results
+if num_investors > 1:
+    st.subheader("Phân bổ lợi nhuận cho nhà đầu tư")
+    
+    investor_terms = InvestorTerms(
+        investors=investors,
+        total_investment=total_investment
+    )
+    
+    profit_shares = financials.calculate_monthly_profit_sharing(
+        monthly_profit=payback['monthly_profit'] * 1_000_000,
+        investor_terms=investor_terms
+    )
+    
+    investor_data = []
+    for inv in investors:
+        share = profit_shares['profit_shares'][inv.name]
+        monthly_loan_payment = 0
+        if inv.loan_terms:
+            loan_payment = financials.calculate_loan_payments(inv.loan_terms)
+            monthly_loan_payment = loan_payment['monthly_payment'] / 1_000_000
+        investor_data.append({
+            'Nhà đầu tư': inv.name,
+            'Tỷ lệ đóng góp': f"{inv.contribution_percent:.1f}%",
+            'Lợi nhuận hàng tháng': f"{share['gross_share']/1_000_000:.2f} triệu VND",
+            'Trả nợ hàng tháng': f"{monthly_loan_payment:.2f} triệu VND",
+            'Thu nhập ròng': f"{share['gross_share']/1_000_000 - monthly_loan_payment:.2f} triệu VND",
+            'Rủi ro rút vốn': f"{share['withdrawal_risk']*100:.0f}%"
+        })
+    
+    df_investors = pd.DataFrame(investor_data)
+    st.table(df_investors)
+    
+    selected_investor = st.selectbox(
+        "Mô phỏng rút vốn",
+        options=[inv.name for inv in investors],
+        index=0,
+        key="withdrawal_sim"
+    )
+    
+    if st.button("Mô phỏng rút vốn"):
+        withdrawal_result = financials.simulate_capital_withdrawal(
+            investor_name=selected_investor,
+            investor_terms=investor_terms,
+            years=next(inv.commitment_years for inv in investors if inv.name == selected_investor),
+            withdraw_percent=100,
+            monthly_profit=payback['monthly_profit'] * 1_000_000
+        )
+        
+        st.warning(f"Kết quả mô phỏng rút vốn của {selected_investor}:")
+        st.write(f"- Vốn rút: {withdrawal_result['withdrawn_capital']/1_000_000:.2f} triệu VND")
+        st.write(f"- Phạt rút vốn: {withdrawal_result['penalty']/1_000_000:.2f} triệu VND")
+        st.write(f"- Nhà đầu tư còn lại: {', '.join(withdrawal_result['remaining_investors'])}")
+        
+        new_shares = []
+        for name, share in withdrawal_result['new_profit_shares']['profit_shares'].items():
+            new_shares.append({
+                'Nhà đầu tư': name,
+                'Tỷ lệ sở hữu mới': f"{share['percentage']*100:.1f}%",
+                'Lợi nhuận mới': f"{share['share']/1_000_000:.2f} triệu VND"
+            })
+        
+        st.table(pd.DataFrame(new_shares))
 
 risk_scenarios = [
     {
@@ -340,11 +476,12 @@ risk_metrics = financials.calculate_risk_metrics(
     scenarios=risk_scenarios
 )
 
+investment_period = max(inv.commitment_years for inv in investors)
 st.header("Phân Tích Trực Quan")
-
 months = list(range(1, investment_period * 12 + 1))
-cumulative_profit = [payback['monthly_profit'] * i for i in months] # Profit is already in millions
-investment_line = [investment_details['total']] * len(months) # Investment is already in millions
+
+cumulative_profit = [payback['monthly_profit'] * i for i in months]
+investment_line = [investment_details['total']] * len(months)
 
 MOUNTING_NAMES = {
     "wall": "Gắn tường",

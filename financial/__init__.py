@@ -2,7 +2,9 @@ from .core import (
     ChargingStationFinancials,
     LoanTerms,
     ElectricityPricing,
-    OperatingCosts
+    OperatingCosts,
+    Investor,
+    InvestorTerms
 )
 from .validation import (
     StationValidator,
@@ -18,6 +20,8 @@ __all__ = [
     'LoanTerms',
     'ElectricityPricing',
     'OperatingCosts',
+    'Investor',
+    'InvestorTerms',
     'StationValidator',
     'SpaceRequirements',
     'SafetyRequirements'

@@ -1,9 +1,37 @@
+from __future__ import annotations
 import json
-from dataclasses import dataclass
-from typing import Dict, List, Optional, Tuple
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional, Tuple, Any
 from datetime import datetime, time
 
 @dataclass
+class Investor:
+    name: str
+    contribution_percent: float  # Percentage of total investment (0-100)
+    own_capital_percent: float  # Percentage of contribution that is own capital (0-100)
+    loan_terms: Optional[LoanTerms] = None  # Loan details for borrowed portion
+    withdrawal_risk: float = 0.0  # 0-1 probability
+    active: bool = True
+    commitment_years: int = 5  # Years of commitment
+
+    @property
+    def borrowed_percent(self) -> float:
+        return 100 - self.own_capital_percent
+
+@dataclass
+class InvestorTerms:
+    investors: List[Investor] = field(default_factory=list)
+    total_investment: float = 0.0  # Total investment amount in VND
+    profit_sharing_model: str = "capital"  # Options: "capital", "equal", "custom"
+    withdrawal_penalty: float = 0.1  # 10% penalty on withdrawn capital
+
+    def validate_investors(self):
+        """Validate that investor percentages sum to 100%"""
+        total_percent = sum(inv.contribution_percent for inv in self.investors)
+        if not (99 <= total_percent <= 101):  # Allow a 1% deviation
+            raise ValueError(f"Investor contributions must sum to 100%, got {total_percent}%")
+
+@dataclass 
 class LoanTerms:
     principal: float
     annual_rate: float
@@ -323,6 +351,114 @@ class ChargingStationFinancials:
             'profit_margin': profit_margin
         }
     
+    def calculate_investor_shares(
+        self,
+        investor_terms: InvestorTerms
+    ) -> Dict[str, Any]:
+        """Calculate each investor's share of costs and profits based on percentage contributions."""
+        investor_terms.validate_investors()
+        
+        investment_shares = {}
+        for investor in investor_terms.investors:
+            # Calculate monetary amounts
+            total_contribution = investor_terms.total_investment * (investor.contribution_percent / 100)
+            own_capital = total_contribution * (investor.own_capital_percent / 100)
+            borrowed_capital = total_contribution - own_capital
+            
+            # Calculate loan payments if applicable
+            loan_payment = 0
+            if investor.loan_terms and borrowed_capital > 0:
+                loan_payment = self.calculate_loan_payments(investor.loan_terms)['monthly_payment']
+            
+            investment_shares[investor.name] = {
+                'contribution_percent': investor.contribution_percent,
+                'total_contribution': total_contribution,
+                'own_capital': own_capital,
+                'borrowed_capital': borrowed_capital,
+                'loan_payment': loan_payment,
+                'withdrawal_risk': investor.withdrawal_risk,
+                'active': investor.active
+            }
+        
+        return {
+            'total_investment': investor_terms.total_investment,
+            'investment_shares': investment_shares,
+            'profit_sharing_model': investor_terms.profit_sharing_model
+        }
+
+    def calculate_monthly_profit_sharing(
+        self,
+        monthly_profit: float,
+        investor_terms: InvestorTerms
+    ) -> Dict[str, Any]:
+        """Calculate profit distribution among investors based on percentage contributions."""
+        shares = self.calculate_investor_shares(investor_terms)
+        
+        profit_shares = {}
+        for name, data in shares['investment_shares'].items():
+            if not data['active']:
+                continue
+                
+            if investor_terms.profit_sharing_model == "equal":
+                share = monthly_profit / len([inv for inv in investor_terms.investors if inv.active])
+            else:  # capital-based sharing
+                share = monthly_profit * (data['contribution_percent'] / 100)
+            
+            # Calculate net profit after loan payments
+            net_share = share - data.get('loan_payment', 0)
+            
+            profit_shares[name] = {
+                'gross_share': share,
+                'net_share': net_share,
+                'loan_payment': data.get('loan_payment', 0),
+                'contribution_percent': data['contribution_percent'],
+                'withdrawal_risk': data['withdrawal_risk']
+            }
+        
+        return {
+            'total_profit': monthly_profit,
+            'profit_shares': profit_shares,
+            'sharing_model': investor_terms.profit_sharing_model
+        }
+
+    def simulate_capital_withdrawal(
+        self,
+        investor_name: str,
+        investor_terms: InvestorTerms,
+        monthly_profit: float
+    ) -> Dict[str, Any]:
+        """Simulate the impact of an investor withdrawing their capital."""
+        # Find the investor
+        investor = next((inv for inv in investor_terms.investors if inv.name == investor_name), None)
+        if not investor:
+            raise ValueError(f"Investor {investor_name} not found")
+        
+        # Calculate total contribution and penalty
+        total_contribution = investor_terms.total_investment * (investor.contribution_percent / 100)
+        penalty = total_contribution * investor_terms.withdrawal_penalty
+        
+        # Update investor status
+        investor.active = False
+        
+        # Recalculate shares without this investor
+        remaining_investors = [inv for inv in investor_terms.investors if inv.active]
+        
+        # Adjust percentages for remaining investors
+        remaining_percent = sum(inv.contribution_percent for inv in remaining_investors)
+        for inv in remaining_investors:
+            inv.contribution_percent = (inv.contribution_percent / remaining_percent) * 100
+        
+        # Calculate new profit distribution
+        profit_shares = self.calculate_monthly_profit_sharing(monthly_profit, investor_terms)
+        
+        return {
+            'withdrawn_capital': total_contribution,
+            'penalty': penalty,
+            'remaining_investors': [inv.name for inv in remaining_investors],
+            'new_profit_shares': profit_shares,
+            'new_total_investment': investor_terms.total_investment - total_contribution
+        }
+
     def calculate_risk_metrics(
         self,
         monthly_revenue: float,
