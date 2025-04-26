@@ -1,0 +1,47 @@
+# Project Intelligence Rules
+
+## Key Patterns
+1. **Currency Handling**:
+   - Always format VNĐ with thousands separators (.)
+   - Round to nearest thousand in displays
+   - Store exact values in calculations
+
+2. **Financial Modeling**:
+   - Use 26 working days/month for calculations
+   - Assume 15-day electricity reimbursement delay
+   - Default to 750 VNĐ/kWh profit share
+
+3. **Investor Allocation**:
+   - Contributions must sum to 100%
+   - Minimum 10% per investor
+   - Withdrawals require 30-day notice
+
+## UI Conventions
+- Sliders for percentage values
+- Number inputs for monetary amounts
+- Red/yellow/green color coding for risk levels
+- Vietnamese first, English second in labels
+
+## Development Practices
+- JSON configs use snake_case
+- Financial methods return DataFrames for plotting
+- Cache heavy calculations with @st.cache_data
+- Type hint all public methods
+
+## Common Pitfalls
+1. Electricity costs are prepaid monthly
+2. Land lease costs vary by province
+3. Charger maintenance costs scale with usage
+4. Investor reports require tax ID numbers
+
+## Performance Tips
+- Pre-calculate common scenarios
+- Lazy-load plotly figures
+- Batch configuration file reads
+- Use vectorized pandas operations
+
+## Testing Guidelines
+- Verify edge cases in investor allocations
+- Test with extreme electricity prices
+- Validate all currency formatting
+- Check empty input scenarios

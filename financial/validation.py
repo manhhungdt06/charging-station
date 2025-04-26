@@ -6,10 +6,13 @@ from .core import ChargerConfig
 
 @dataclass
 class SpaceRequirements:
-    parking_length: float = 5000
-    parking_width: float = 2500
-    total_length: float = 5400
-    min_spacing: float = 2271
+    parking_length: float = 5000  # mm
+    parking_width: float = 2500   # mm
+    total_length: float = 5400   # mm
+    min_spacing: float = 2271     # mm between chargers
+    safety_margin: float = 1000   # mm safety buffer
+    transformer_area: float = 20000000  # mm² for transformer
+    auxiliary_space: float = 30000000  # mm² for other equipment
 
 @dataclass
 class SafetyRequirements:
@@ -17,6 +20,11 @@ class SafetyRequirements:
     input_voltage_compliant: bool = False
     protection_features: List[str] = None
     ip_rating: str = None
+    emergency_stop: bool = True
+    ground_fault_protection: bool = True
+    overcurrent_protection: bool = True
+    temperature_monitoring: bool = True
+    cable_management: bool = True
 
 class StationValidator:
     def __init__(self, config_path: str = "vinfast-charger.json"):
@@ -42,34 +50,43 @@ class StationValidator:
         
         space_per_spot = self.space_reqs.total_length * self.space_reqs.parking_width
         
-        if mounting_type == "wall":
-            spacing = 4000
-        elif mounting_type == "side":
-            spacing = 900
-        elif mounting_type == "rear":
-            spacing = 1150
-        else:
+        # Use spacing based on mounting type
+        spacing = {
+            "wall": 4000,
+            "side": 900,
+            "rear": 1150
+        }.get(mounting_type, self.space_reqs.min_spacing)
+        
+        if mounting_type not in ["wall", "side", "rear"]:
             raise ValueError(f"Invalid mounting type: {mounting_type}")
         
         total_spots = sum(config.quantity for config in charger_configs)
         
-        total_width = (self.space_reqs.parking_width * total_spots) + (spacing * (total_spots - 1))
-        total_length = self.space_reqs.total_length
+        # Calculate total dimensions with safety margins
+        total_width = (self.space_reqs.parking_width * total_spots) + \
+                     (spacing * (total_spots - 1)) + \
+                     (2 * self.space_reqs.safety_margin)
+        
+        total_length = self.space_reqs.total_length + self.space_reqs.safety_margin
         
         total_power = sum(config.power * config.quantity for config in charger_configs)
-        transformer_area = 20_000_000 if total_power > 560 else 0
         
-        base_area = (total_width * total_length)
-        required_area = (base_area + transformer_area) / 1_000_000
+        # Calculate required areas
+        parking_area = total_width * total_length
+        transformer_area = self.space_reqs.transformer_area if total_power > 560 else 0
+        auxiliary_area = self.space_reqs.auxiliary_space
         
-        required_area *= 1.2
+        total_area = (parking_area + transformer_area + auxiliary_area) / 1_000_000
         
         return {
-            'required_area': required_area,
-            'space_per_charger': space_per_spot / 1_000_000,
-            'total_width': total_width / 1000,
-            'total_length': total_length / 1000,
-            'needs_transformer': total_power > 560
+            'required_area': round(total_area, 2),
+            'space_per_charger': round(space_per_spot / 1_000_000, 2),
+            'total_width': round(total_width / 1000, 2),
+            'total_length': round(total_length / 1000, 2),
+            'needs_transformer': total_power > 560,
+            'parking_area': round(parking_area / 1_000_000, 2),
+            'transformer_area': round(transformer_area / 1_000_000, 2),
+            'auxiliary_area': round(auxiliary_area / 1_000_000, 2)
         }
     
     def validate_safety_requirements(self, charger_configs: List[ChargerConfig]) -> List[Dict]:

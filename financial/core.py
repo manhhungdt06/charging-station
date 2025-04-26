@@ -69,6 +69,10 @@ class OperatingCosts:
     other: float = 5_000_000
     land_lease_deposit_months: int = 6
     additional_monthly_income: float = 0
+    capacity_fee_per_kw: float = 0
+    insurance_cost: float = 3_000_000
+    marketing_cost: float = 2_000_000
+    working_capital_months: int = 2  # Months of electricity to prepay
 
 @dataclass
 class ChargingTimeConfig:
@@ -263,14 +267,26 @@ class ChargingStationFinancials:
         electricity_pricing: ElectricityPricing,
         operating_costs: OperatingCosts,
         additional_monthly_income: float = 0,
-        loan: Optional[LoanTerms] = None
+        loan: Optional[LoanTerms] = None,
+        electricity_cost_per_kwh: float = 4500,  # Actual EVN rate
+        total_power_kw: float = 0  # Total station power in kW
     ) -> Dict:
-        # Calculate monthly operating costs without electricity since VinFast pays for it
+        # Calculate full monthly operating costs including capacity fees and insurance
         monthly_operating_costs = (
             operating_costs.land_lease_per_m2 * required_area +
             operating_costs.staff +
             operating_costs.maintenance +
-            operating_costs.other
+            operating_costs.other +
+            operating_costs.capacity_fee_per_kw * total_power_kw +
+            operating_costs.insurance_cost +
+            operating_costs.marketing_cost
+        )
+
+        # Calculate working capital cost for electricity prepayment
+        monthly_electricity_cost = total_monthly_kwh * electricity_cost_per_kwh
+        working_capital_cost = (
+            monthly_electricity_cost * operating_costs.working_capital_months * 
+            (loan.annual_rate/12 if loan else 0.01)  # 1% opportunity cost if no loan
         )
         
         # Monthly costs are just operating costs since VinFast pays for electricity
