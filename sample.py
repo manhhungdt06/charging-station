@@ -68,7 +68,7 @@ total_investment = st.sidebar.number_input(
 num_investors = st.sidebar.number_input(
     "Số lượng nhà đầu tư",
     min_value=1,
-    max_value=5,
+    max_value=10,
     value=1,
     key="num_investors"
 )
@@ -143,11 +143,12 @@ for i in range(num_investors):
             own_capital_percent=own_capital,
             loan_terms=loan_terms,
             withdrawal_risk=0.0,
-            commitment_years=5
+            commitment_years=commitment_years
         ))
+
         # After collecting all investors, normalize the percentages
         total_percent = sum(inv.contribution_percent for inv in investors)
-        if total_percent > 0:  # Avoid division by zero
+        if total_percent > 0:
             for inv in investors:
                 inv.contribution_percent = (inv.contribution_percent / total_percent) * 100
 
@@ -383,16 +384,19 @@ with col3:
 if num_investors > 1:
     st.subheader("Phân bổ lợi nhuận cho nhà đầu tư")
     
+    # Create investor terms with updated investor objects 
     investor_terms = InvestorTerms(
         investors=investors,
         total_investment=total_investment
     )
     
+    # Calculate profit sharing with updated investor terms
     profit_shares = financials.calculate_monthly_profit_sharing(
         monthly_profit=payback['monthly_profit'] * 1_000_000,
         investor_terms=investor_terms
     )
     
+    # Create DataFrame with updated profit sharing data
     investor_data = []
     for inv in investors:
         share = profit_shares['profit_shares'][inv.name]
@@ -402,16 +406,18 @@ if num_investors > 1:
             monthly_loan_payment = loan_payment['monthly_payment'] / 1_000_000
         investor_data.append({
             'Nhà đầu tư': inv.name,
-            'Tỷ lệ đóng góp': f"{inv.contribution_percent:.1f}%",
+            'Tỷ lệ đóng góp': f"{share['contribution_percent']:.1f}%",
             'Lợi nhuận hàng tháng': f"{share['gross_share']/1_000_000:.2f} triệu VND",
-            'Trả nợ hàng tháng': f"{monthly_loan_payment:.2f} triệu VND",
+            'Trả nợ hàng tháng': f"{monthly_loan_payment:.2f} triệu VND", 
             'Thu nhập ròng': f"{share['gross_share']/1_000_000 - monthly_loan_payment:.2f} triệu VND",
             'Rủi ro rút vốn': f"{share['withdrawal_risk']*100:.0f}%"
         })
     
+    # Update table with new data
     df_investors = pd.DataFrame(investor_data)
     st.table(df_investors)
     
+    # Rest of the withdrawal simulation code remains unchanged
     selected_investor = st.selectbox(
         "Mô phỏng rút vốn",
         options=[inv.name for inv in investors],
