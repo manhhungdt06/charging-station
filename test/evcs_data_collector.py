@@ -132,10 +132,12 @@ for district in districts:
                     latitude = item.get('latitude', 0)
                     longitude = item.get('longitude', 0)
                     
-                    doc_id = calculate_id(location_id, latitude, longitude)
+                    current_time = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+                    doc_id = calculate_id(current_time, location_id, latitude, longitude)
                     
                     mongodb_doc = {
                         '_id': doc_id,
+                        'time': current_time,
                         'district_id': calculate_id(*list(each_location.values())),
                         'district': each_location['address'],
                         'locationId': location_id,
