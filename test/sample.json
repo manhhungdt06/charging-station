@@ -1,0 +1,690 @@
+[
+    {'code': 200000, 'data': [
+            {'locationId': 'C.HNO0820', 'stationName': 'NQ Tư Nhân Nguyễn Huy Hùng', 'stationAddress': 'Số 23 Ngõ 33 Tân Ấp, Phúc Xá, Ba Đình, Hà Nội', 'latitude': 21.047159, 'longitude': 105.845299, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcEM1Q3lXcFY5bnpLZDBuY0hWbzhBPT0%3D', 
+                'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcEtRTnlhcUxlM2JPYzBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            // ...
+
+            {'locationId': 'C.HNO1089', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Quý Nghĩa', 'stationAddress': 'Số 3B, Ngách 35, Ngõ 76 An Dương, Yên Phụ, Tây Hồ, Hà Nội', 'latitude': 21.055984, 'longitude': 105.840599, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdm1TQVF1V05PM3RNTzhuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1047', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Bình Giang', 'stationAddress': 'số 36 Ngọc Thuỵ Long Biên, Hà Nội', 'latitude': 21.047821, 'longitude': 105.865608, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdExzQ0F5V0IvTHhHOUluY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1327', 'stationName': 'Nhượng quyền Nguyễn Quang Minh', 'stationAddress': '19 ngõ 66 phường Ngọc Thuỵ, quận Long Biên, Hà Nội', 'latitude': 21.049692, 'longitude': 105.866386, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc21hTnoyeUE4ak1Hc1FuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTJPRHltTk01dkxUdUluY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1138', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Thành', 'stationAddress': '344/8 Số Nhà 14 ngọc thụy , Long Biên, Hà Nội', 'latitude': 21.05991, 'longitude': 105.864616, 'evsePowers': [
+                    {'type': 7400, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGFjSXplak41UGxSTkFuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkdISFNxME11RFhMdEFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1124', 'stationName': 'Nhượng Quyền Tư Nhân Vũ Quang Hoàng', 'stationAddress': 'Số 32, Ngõ 55, Phố Tứ Liên, Tây Hồ, Hà Nội', 'latitude': 21.065134, 'longitude': 105.833206, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc2EvS3huVEplaktLY0VuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcEh2SWcrSUFmV1RET3duY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1226', 'stationName': 'Nhượng Quyền Tư nhân Cty Cổ Phần Chứng Khoán SSI', 'stationAddress': 'BT5+6 Khu BT 18 Đặng Thai Mai, Quảng An, Tây Hồ', 'latitude': 21.058994, 'longitude': 105.825798, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdStUSlVpTEY1SEtET3duY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENMTlRTZExKRHFEY1FuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1300', 'stationName': 'Nhượng Quyền Tư Nhân Bùi Thành Huế', 'stationAddress': 'Số  358 Bạch Đằng, Chương Dương, Hoàn Kiếm, Hà Nội', 'latitude': 21.023317, 'longitude': 105.862411, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdFd2RmtXckFwWGpFUDBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0177', 'stationName': 'Chung cư Rice City sông Hồng', 'stationAddress': 'Bãi đỗ xe ngoài trời chung cư Rice City Sông Hồng, Đường Gia Quất', 'latitude': 21.053864, 'longitude': 105.876076, 'evsePowers': [
+                    {'type': 20000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    },
+                    {'type': 30000, 'numberOfAvailableEvse': 1, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 5, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '07: 30-19: 30', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phczNxS1JpMUJ2bmpSTUFuRFh4cThzdFVETlkvYlZmcjlRVDQ3Z0dvNk5uRDRsMVc4UFlvNkFDWGwzQVQrMzQ9'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1143', 'stationName': 'Nhượng Quyền Tư Nhân Hoàng Đức Nghĩa', 'stationAddress': 'Ngõ 50 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội', 'latitude': 21.054972, 'longitude': 105.820381, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkt2RFJPckJaSERGZjBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0662', 'stationName': 'Bãi đỗ xe tư nhân 138B Giảng Võ', 'stationAddress': 'Số 138B, Phường Giảng Võ', 'latitude': 21.029112, 'longitude': 105.825745, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0538', 'stationName': 'Chung cư Berriver Long Biên No3 - Bãi đỗ xe ngoài trời', 'stationAddress': 'Ngõ 390, đường Nguyễn Văn Cừ, phường Bồ Đề', 'latitude': 21.044456, 'longitude': 105.87738, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 3, 'totalEvse': 3
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc09kRkJpUEZmS1JDTnNuRjFKZnlKd0tUWTFoS0Rucm1nZjU2d2V0NzZpYm9nOD0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0209', 'stationName': 'Khách sạn Somerset West Lake Hanoi', 'stationAddress': 'Khách sạn Somerset West Lake Hanoi, số 254 Thụy Khê', 'latitude': 21.04398, 'longitude': 105.818672, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGJwTmsrdVVaVGtEWVFuT3lZb3A1dGZIZHRpSzI2L293NnQ3MUdvdmVQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3lTS1I2eFVPWFJLc0FuUEgwcnBwc0pHWW8wZW1yczlRQ3B2QVgvdWJMZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdHVHSGhtR1hNZkpUdlFuT0NndDlabFlSNGcyTFd2dTkxUDE1d2V1dkxEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1021', 'stationName': 'Nhượng quyền Đỗ Trí Dũng', 'stationAddress': '36 Ngõ 55 Đê Phương Trach, Xóm Nghè, Thôn Đông Hội, Xã Đông Ngàn, Huyện Đông Anh, TP. Hà Nội', 'latitude': 21.068605, 'longitude': 105.866882, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3UzQ2htTVVmV1RTKzBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1296', 'stationName': 'Nhượng Quyền Tư nhân Lê Đình Dương ', 'stationAddress': 'Ngõ Thịnh Hào 2, Tôn Đức Thắng, Phường Hàng Bột, Đống Đa, Hà Nội', 'latitude': 21.023348, 'longitude': 105.831635, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc09IVmlXT05PM3RNc2NuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0112', 'stationName': 'Tòa nhà SomerSet West Point - Hầm B3', 'stationAddress': 'Hầm B3, tòa SomerSet West Point, số 2, đường Tây Hồ, phường Quảng An', 'latitude': 21.066486, 'longitude': 105.826286, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 3, 'totalEvse': 3
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc0NvTTBpcExQdnhGL0luWjM0dHBKd1BTOXRtZkdudXB3R3E1MVg4dXJEZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcFNMSVJHa0k1YkpUZG9uWjN4NXBwME1IZHBuZlQzdHBBTDh2MWI5N0xQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWVTVWt6Y0o1U1JEb1VuYVM0cG9Ka0NUNFpqS20zb29GZXV1RktxdnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGp1VWdXc0YvYmhEdGNuT0hwN3Jzd09HNGsyZnp1ODl3RDY3Z2YvNnVEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1268', 'stationName': 'Nhượng quyền Nguyễn Minh Tiến', 'stationAddress': 'Số 05 ngách 604/1 đường Ngọc Thuỵ, tổ 25 phường Ngọc Thuỵ, quận Long Biên, Hà Nội', 'latitude': 21.062992, 'longitude': 105.873672, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdE9wTnhUZEZQRGdHdlluY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdGlTQzB6WFV0TGpPUFFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0126', 'stationName': 'Bãi đỗ xe Khách sạn La Thành', 'stationAddress': 'Bãi đỗ xe\xa0Khách sạn La Thành, số 226 Vạn Phúc, phường Liễu Giai', 'latitude': 21.033375, 'longitude': 105.819283, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdG02SFUydFBzM0tOWUFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0949', 'stationName': 'NQ CÔNG TY CỔ PHẦN VIỆT S.U.N G.R.E.E.N', 'stationAddress': '35 Hoàng Minh Đạo, P. Bồ Đề', 'latitude': 21.041582, 'longitude': 105.880188, 'evsePowers': [
+                    {'type': 60000, 'numberOfAvailableEvse': 0, 'totalEvse': 2
+                    },
+                    {'type': 120000, 'numberOfAvailableEvse': 0, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0797', 'stationName': 'NQ TXTX Lại Đức Cường', 'stationAddress': 'Số 550 Ngọc Lâm, Gia Thụy, Long Biên, HN', 'latitude': 21.049829, 'longitude': 105.881126, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdGFIS3hlSkM1WFBMNDBuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXVYRnlTQkhzSG1IZE1uY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            }
+        ]
+    },
+    {'code': 200000, 'data': [
+            {'locationId': 'C.HNO0820', 'stationName': 'NQ Tư Nhân Nguyễn Huy Hùng', 'stationAddress': 'Số 23 Ngõ 33 Tân Ấp, Phúc Xá, Ba Đình, Hà Nội', 'latitude': 21.047159, 'longitude': 105.845299, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcEM1Q3lXcFY5bnpLZDBuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcEtRTnlhcUxlM2JPYzBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1089', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Quý Nghĩa', 'stationAddress': 'Số 3B, Ngách 35, Ngõ 76 An Dương, Yên Phụ, Tây Hồ, Hà Nội', 'latitude': 21.055984, 'longitude': 105.840599, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdm1TQVF1V05PM3RNTzhuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1226', 'stationName': 'Nhượng Quyền Tư nhân Cty Cổ Phần Chứng Khoán SSI', 'stationAddress': 'BT5+6 Khu BT 18 Đặng Thai Mai, Quảng An, Tây Hồ', 'latitude': 21.058994, 'longitude': 105.825798, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdStUSlVpTEY1SEtET3duY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENMTlRTZExKRHFEY1FuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1124', 'stationName': 'Nhượng Quyền Tư Nhân Vũ Quang Hoàng', 'stationAddress': 'Số 32, Ngõ 55, Phố Tứ Liên, Tây Hồ, Hà Nội', 'latitude': 21.065134, 'longitude': 105.833206, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc2EvS3huVEplaktLY0VuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcEh2SWcrSUFmV1RET3duY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0209', 'stationName': 'Khách sạn Somerset West Lake Hanoi', 'stationAddress': 'Khách sạn Somerset West Lake Hanoi, số 254 Thụy Khê', 'latitude': 21.04398, 'longitude': 105.818672, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGJwTmsrdVVaVGtEWVFuT3lZb3A1dGZIZHRpSzI2L293NnQ3MUdvdmVQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3lTS1I2eFVPWFJLc0FuUEgwcnBwc0pHWW8wZW1yczlRQ3B2QVgvdWJMZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdHVHSGhtR1hNZkpUdlFuT0NndDlabFlSNGcyTFd2dTkxUDE1d2V1dkxEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0662', 'stationName': 'Bãi đỗ xe tư nhân 138B Giảng Võ', 'stationAddress': 'Số 138B, Phường Giảng Võ', 'latitude': 21.029112, 'longitude': 105.825745, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1143', 'stationName': 'Nhượng Quyền Tư Nhân Hoàng Đức Nghĩa', 'stationAddress': 'Ngõ 50 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội', 'latitude': 21.054972, 'longitude': 105.820381, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkt2RFJPckJaSERGZjBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1047', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Bình Giang', 'stationAddress': 'số 36 Ngọc Thuỵ Long Biên, Hà Nội', 'latitude': 21.047821, 'longitude': 105.865608, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdExzQ0F5V0IvTHhHOUluY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1327', 'stationName': 'Nhượng quyền Nguyễn Quang Minh', 'stationAddress': '19 ngõ 66 phường Ngọc Thuỵ, quận Long Biên, Hà Nội', 'latitude': 21.049692, 'longitude': 105.866386, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc21hTnoyeUE4ak1Hc1FuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTJPRHltTk01dkxUdUluY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1296', 'stationName': 'Nhượng Quyền Tư nhân Lê Đình Dương ', 'stationAddress': 'Ngõ Thịnh Hào 2, Tôn Đức Thắng, Phường Hàng Bột, Đống Đa, Hà Nội', 'latitude': 21.023348, 'longitude': 105.831635, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc09IVmlXT05PM3RNc2NuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0126', 'stationName': 'Bãi đỗ xe Khách sạn La Thành', 'stationAddress': 'Bãi đỗ xe\xa0Khách sạn La Thành, số 226 Vạn Phúc, phường Liễu Giai', 'latitude': 21.033375, 'longitude': 105.819283, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdG02SFUydFBzM0tOWUFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0112', 'stationName': 'Tòa nhà SomerSet West Point - Hầm B3', 'stationAddress': 'Hầm B3, tòa SomerSet West Point, số 2, đường Tây Hồ, phường Quảng An', 'latitude': 21.066486, 'longitude': 105.826286, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 3, 'totalEvse': 3
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc0NvTTBpcExQdnhGL0luWjM0dHBKd1BTOXRtZkdudXB3R3E1MVg4dXJEZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcFNMSVJHa0k1YkpUZG9uWjN4NXBwME1IZHBuZlQzdHBBTDh2MWI5N0xQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWVTVWt6Y0o1U1JEb1VuYVM0cG9Ka0NUNFpqS20zb29GZXV1RktxdnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGp1VWdXc0YvYmhEdGNuT0hwN3Jzd09HNGsyZnp1ODl3RDY3Z2YvNnVEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1138', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Thành', 'stationAddress': '344/8 Số Nhà 14 ngọc thụy , Long Biên, Hà Nội', 'latitude': 21.05991, 'longitude': 105.864616, 'evsePowers': [
+                    {'type': 7400, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGFjSXplak41UGxSTkFuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkdISFNxME11RFhMdEFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1161', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Toàn', 'stationAddress': 'Đội Nhân, Vĩnh Phúc, Ba Đình, Hà Nội', 'latitude': 21.041803, 'longitude': 105.81366, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3V5SlI2UEQ4YlJHOXNuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTYxQVJpa04rcnBLOEFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0317', 'stationName': 'Vinhomes Metropolis, hầm B4', 'stationAddress': 'Hầm B4, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 17, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 17, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdk9kRWpQWEIvblVKdUFuUEg0dW9NOEtTNHBoSVREcnBnZW92UW1oNGJYVTRGMVU5ZVJGaWxEZXltZFg0V2wv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3VHVWdpL0U4SGtFczBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVU5ZThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXk3RkJxSkF1ZkhMTmduQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVg4dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXlVSVNTMUxlV1NSWTBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVc4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0316', 'stationName': 'Vinhomes Metropolis, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 9, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 18, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 29, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENjTndpQ0x1SEROOGNuWm4wcThabGVIWVkxZkQrODlnSCs3Z2I4N3VEZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkd0SXptV0xlTGFFOVFuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlU5dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGp2VjBTVU1kck9UUE1uQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlc5ZThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0025', 'stationName': 'Vincom Center Metropolis - Hầm B3', 'stationAddress': 'Cột M6, hầm B3, Vincom Center Metropolis, số 29, đường Liễu Giai, phường Ngọc Khánh', 'latitude': 21.03126, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 4, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWJxSFN1eU5OWDFOZkluQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGdFg4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1300', 'stationName': 'Nhượng Quyền Tư Nhân Bùi Thành Huế', 'stationAddress': 'Số  358 Bạch Đằng, Chương Dương, Hoàn Kiếm, Hà Nội', 'latitude': 21.023317, 'longitude': 105.862411, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdFd2RmtXckFwWGpFUDBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0674', 'stationName': 'Nhượng quyền Standard - Công ty Cổ phần phát triển Quang Phúc', 'stationAddress': 'Số 11, Ngõ 5, Đường Láng Hạ, Phường Thành Công', 'latitude': 21.021854, 'longitude': 105.819336, 'evsePowers': [
+                    {'type': 60000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1021', 'stationName': 'Nhượng quyền Đỗ Trí Dũng', 'stationAddress': '36 Ngõ 55 Đê Phương Trach, Xóm Nghè, Thôn Đông Hội, Xã Đông Ngàn, Huyện Đông Anh, TP. Hà Nội', 'latitude': 21.068605, 'longitude': 105.866882, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3UzQ2htTVVmV1RTKzBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            }
+        ]
+    },
+    {'code': 200000, 'data': [
+            {'locationId': 'C.HNO1161', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Toàn', 'stationAddress': 'Đội Nhân, Vĩnh Phúc, Ba Đình, Hà Nội', 'latitude': 21.041803, 'longitude': 105.81366, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3V5SlI2UEQ4YlJHOXNuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTYxQVJpa04rcnBLOEFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0121', 'stationName': 'Chung cư Bộ Kế hoạch và Đầu tư', 'stationAddress': 'Bãi đỗ xe mặt đất, chung cư Bộ Kế hoạch và Đầu tư, ngõ 1 Đông Quan, phường Quan Hoa', 'latitude': 21.038996, 'longitude': 105.805313, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 0, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdmV5Vmd5VkxQbm5LZlluYm4wc3I1MEtTNDgwZnpyczlRUDd2QVg2NjdMSjQwWU10YVk9', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdnVrWHhxd0x2RHRNTmtuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxEZXltZFgrM2Qv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdUNwSVJqY0xlYm1HSVVuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxYZXltZFgrM2Qv'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0209', 'stationName': 'Khách sạn Somerset West Lake Hanoi', 'stationAddress': 'Khách sạn Somerset West Lake Hanoi, số 254 Thụy Khê', 'latitude': 21.04398, 'longitude': 105.818672, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGJwTmsrdVVaVGtEWVFuT3lZb3A1dGZIZHRpSzI2L293NnQ3MUdvdmVQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3lTS1I2eFVPWFJLc0FuUEgwcnBwc0pHWW8wZW1yczlRQ3B2QVgvdWJMZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdHVHSGhtR1hNZkpUdlFuT0NndDlabFlSNGcyTFd2dTkxUDE1d2V1dkxEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0317', 'stationName': 'Vinhomes Metropolis, hầm B4', 'stationAddress': 'Hầm B4, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 17, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 17, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdk9kRWpQWEIvblVKdUFuUEg0dW9NOEtTNHBoSVREcnBnZW92UW1oNGJYVTRGMVU5ZVJGaWxEZXltZFg0V2wv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3VHVWdpL0U4SGtFczBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVU5ZThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXk3RkJxSkF1ZkhMTmduQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVg4dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXlVSVNTMUxlV1NSWTBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVc4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0316', 'stationName': 'Vinhomes Metropolis, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 9, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 18, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 29, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENjTndpQ0x1SEROOGNuWm4wcThabGVIWVkxZkQrODlnSCs3Z2I4N3VEZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkd0SXptV0xlTGFFOVFuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlU5dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGp2VjBTVU1kck9UUE1uQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlc5ZThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0025', 'stationName': 'Vincom Center Metropolis - Hầm B3', 'stationAddress': 'Cột M6, hầm B3, Vincom Center Metropolis, số 29, đường Liễu Giai, phường Ngọc Khánh', 'latitude': 21.03126, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 4, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWJxSFN1eU5OWDFOZkluQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGdFg4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0126', 'stationName': 'Bãi đỗ xe Khách sạn La Thành', 'stationAddress': 'Bãi đỗ xe\xa0Khách sạn La Thành, số 226 Vạn Phúc, phường Liễu Giai', 'latitude': 21.033375, 'longitude': 105.819283, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdG02SFUydFBzM0tOWUFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0850', 'stationName': 'NQ Tư Nhân Phạm Phi Khanh', 'stationAddress': 'Số 5 ngõ 40, Nghĩa Đô, Xuân La, Tây Hồ, Hà Nội', 'latitude': 21.050446, 'longitude': 105.795914, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdmJxQ0M2T0x2Q1RLdG9uTFhkNTVjdGVXb3hnY0dXNG9sUHA3QUM4NnI3QTkxcGY2NnNIMVE9PQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdldZS3dTektmTHhDK1VuTFhkNTVjdGVXb3hnY0dXNG9sUGl0RUQr'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1143', 'stationName': 'Nhượng Quyền Tư Nhân Hoàng Đức Nghĩa', 'stationAddress': 'Ngõ 50 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội', 'latitude': 21.054972, 'longitude': 105.820381, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkt2RFJPckJaSERGZjBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0313', 'stationName': 'Vincom Center Nguyễn Chí Thanh, hầm B5', 'stationAddress': 'Hầm B5, Vinhomes Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh', 'latitude': 21.023699, 'longitude': 105.809601, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 7, 'totalEvse': 7
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 12, 'totalEvse': 14
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 68, 'totalEvse': 69
+                    }
+                ], 'numberOfAvailableEvse': 87, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXkwVVF5Sk5jajZETWNuYVM5N3BKNE9Ib2swS3pEcDlRNm91d1dvNGJmZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkNXRjBYUlV1YlNDc1luTzN3cnBNeGVUZDFrS0RpNy9GVDU2MU9yNmVmZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdm1FRFRlSUVkS1hFNEVuTzM0dDhzdFpTSTVoS1QzdXBsZjg1d21xN0xEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0312', 'stationName': 'Vinhomes Nguyễn Chí Thanh - Hầm B4', 'stationAddress': 'Số 54A, đường Nguyễn Chí Thanh, phường Láng Thượng', 'latitude': 21.023491, 'longitude': 105.809402, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 5, 'totalEvse': 5
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 10, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 12, 'totalEvse': 12
+                    }
+                ], 'numberOfAvailableEvse': 27, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdEdtTXhHbkt0Zk5Lb1FuYlM0cXVjUktHQT09'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0027', 'stationName': 'Vincom Center Nguyễn Chí Thanh - Hầm B3', 'stationAddress': 'Hầm B3, Vincom Center Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh, phường Láng Thượng', 'latitude': 21.023161, 'longitude': 105.80954, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 8, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdE92S1M2aUZNTDRQK0VuYnl0NTlweGZISWcySVczbzl3U3V1QWY3dnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcytvQlRTVVU1ZVdMSVVuYkhrb3BaZ01TWWd5S1R6bzgxZjl1QU9xN2JiZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0311', 'stationName': 'Vincom Center Nguyễn Chí Thanh, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh', 'latitude': 21.023155, 'longitude': 105.80954, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 11, 'totalEvse': 13
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 20, 'totalEvse': 26
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 37, 'totalEvse': 44
+                    }
+                ], 'numberOfAvailableEvse': 68, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcE93S2hHeU1zZlhMdFluYnl0NTlweGZISWcySVczbzl3U3V1QWY3dnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcENZTWpTb0VzakxUczBuT240aHA1bGNSNDFvS21udDhBK3F2d0NwdXJQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdSszVndqWFZ0WFdQdGtuYWk1OG84Z05IdHhpS0RDNm8xU283RkdyNGVMZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0662', 'stationName': 'Bãi đỗ xe tư nhân 138B Giảng Võ', 'stationAddress': 'Số 138B, Phường Giảng Võ', 'latitude': 21.029112, 'longitude': 105.825745, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1024', 'stationName': 'Nhượng quyền 55 Dịch Vọng', 'stationAddress': '55 Dịch Vọng. phường Dịch Vọng, Quận Cầu Giấy, Hà Nội', 'latitude': 21.030874, 'longitude': 105.792351, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWVhS0RLelZOZnFHK0FuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc251Q2d5dUN1eVZTdTBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0674', 'stationName': 'Nhượng quyền Standard - Công ty Cổ phần phát triển Quang Phúc', 'stationAddress': 'Số 11, Ngõ 5, Đường Láng Hạ, Phường Thành Công', 'latitude': 21.021854, 'longitude': 105.819336, 'evsePowers': [
+                    {'type': 60000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1226', 'stationName': 'Nhượng Quyền Tư nhân Cty Cổ Phần Chứng Khoán SSI', 'stationAddress': 'BT5+6 Khu BT 18 Đặng Thai Mai, Quảng An, Tây Hồ', 'latitude': 21.058994, 'longitude': 105.825798, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdStUSlVpTEY1SEtET3duY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENMTlRTZExKRHFEY1FuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0101', 'stationName': 'Tòa nhà N01T8 Ngoại giao đoàn', 'stationAddress': 'Tòa nhà N01T8 Ngoại giao đoàn, khu Ngoại giao đoàn, phường Xuân Tảo', 'latitude': 21.063898, 'longitude': 105.796516, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 3, 'totalEvse': 3
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3VMTERxZ05wcldHZDRuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxEZXltZFgrM2Qv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGlPRmdpOU5mcmhQZTBuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxQZXltZFgrM2Qv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdStrTHdqZEYrcVRMTkFuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxMZXltZFgrM2Qv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcE9wWDBpOUhNcVJNUDBuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxYZXltZFgrM2Qv'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0717', 'stationName': 'Báo Lao Động', 'stationAddress': '6 Phạm Văn Bạch, P.Yên Hòa', 'latitude': 21.024214, 'longitude': 105.790009, 'evsePowers': [
+                    {'type': 120000, 'numberOfAvailableEvse': 3, 'totalEvse': 8
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcE9jVVJQZElQTGtEZlFuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdnU0TkN1Z0tjak1HTUluY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWlzVmdxSEE1TG1MdEVuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0102', 'stationName': 'Tòa nhà N04A Ngoại giao đoàn', 'stationAddress': 'Tòa nhà N04A Ngoại giao đoàn, khu Ngoại giao đoàn, phường Xuân Tảo', 'latitude': 21.066566, 'longitude': 105.801178, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 3, 'totalEvse': 3
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '06: 00-22: 00', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phczIzSmorQkE5bklCZDRuYlhraHBjOWJTdDFvZXppNzhBZjU2d0NoNmVmQy9BSVdvZz09', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcENwQVJHeFVlM1lLdk1uYUh3cjhwdGNUb3RuZkR6cnBBTDl2VmI5N2JYRDRVWU10YVk9', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWVZVkJ1UEYrdm5LdXduYUN3djhjOE5UdDlvTHp5OThGWDk3UUNzN2VYRDQwWU10YVk9', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdG0xRVJlOEpkclJDdEFuYmlzdG81a09UWXRsTFQvci9WUCt2VlN1N3JYQzRVWU10YVk9', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc0NuSWdxSUxlallFdUVuUFNrczlaeGNIZHBnZjIyNG9RT3U2Z2o2dnVURDUwWU10YVk9'
+                ], 'evse': 'VinFast'
+            }
+        ]
+    },
+    {'code': 200000, 'data': [
+            {'locationId': 'C.HNO0121', 'stationName': 'Chung cư Bộ Kế hoạch và Đầu tư', 'stationAddress': 'Bãi đỗ xe mặt đất, chung cư Bộ Kế hoạch và Đầu tư, ngõ 1 Đông Quan, phường Quan Hoa', 'latitude': 21.038996, 'longitude': 105.805313, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 0, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdmV5Vmd5VkxQbm5LZlluYm4wc3I1MEtTNDgwZnpyczlRUDd2QVg2NjdMSjQwWU10YVk9', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdnVrWHhxd0x2RHRNTmtuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxEZXltZFgrM2Qv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdUNwSVJqY0xlYm1HSVVuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxYZXltZFgrM2Qv'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0317', 'stationName': 'Vinhomes Metropolis, hầm B4', 'stationAddress': 'Hầm B4, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 17, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 17, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdk9kRWpQWEIvblVKdUFuUEg0dW9NOEtTNHBoSVREcnBnZW92UW1oNGJYVTRGMVU5ZVJGaWxEZXltZFg0V2wv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3VHVWdpL0U4SGtFczBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVU5ZThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXk3RkJxSkF1ZkhMTmduQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVg4dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXlVSVNTMUxlV1NSWTBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVc4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0316', 'stationName': 'Vinhomes Metropolis, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 9, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 18, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 29, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENjTndpQ0x1SEROOGNuWm4wcThabGVIWVkxZkQrODlnSCs3Z2I4N3VEZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkd0SXptV0xlTGFFOVFuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlU5dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGp2VjBTVU1kck9UUE1uQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlc5ZThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0025', 'stationName': 'Vincom Center Metropolis - Hầm B3', 'stationAddress': 'Cột M6, hầm B3, Vincom Center Metropolis, số 29, đường Liễu Giai, phường Ngọc Khánh', 'latitude': 21.03126, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 4, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWJxSFN1eU5OWDFOZkluQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGdFg4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1161', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Toàn', 'stationAddress': 'Đội Nhân, Vĩnh Phúc, Ba Đình, Hà Nội', 'latitude': 21.041803, 'longitude': 105.81366, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3V5SlI2UEQ4YlJHOXNuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTYxQVJpa04rcnBLOEFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0126', 'stationName': 'Bãi đỗ xe Khách sạn La Thành', 'stationAddress': 'Bãi đỗ xe\xa0Khách sạn La Thành, số 226 Vạn Phúc, phường Liễu Giai', 'latitude': 21.033375, 'longitude': 105.819283, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdG02SFUydFBzM0tOWUFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0313', 'stationName': 'Vincom Center Nguyễn Chí Thanh, hầm B5', 'stationAddress': 'Hầm B5, Vinhomes Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh', 'latitude': 21.023699, 'longitude': 105.809601, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 7, 'totalEvse': 7
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 12, 'totalEvse': 14
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 68, 'totalEvse': 69
+                    }
+                ], 'numberOfAvailableEvse': 87, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXkwVVF5Sk5jajZETWNuYVM5N3BKNE9Ib2swS3pEcDlRNm91d1dvNGJmZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkNXRjBYUlV1YlNDc1luTzN3cnBNeGVUZDFrS0RpNy9GVDU2MU9yNmVmZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdm1FRFRlSUVkS1hFNEVuTzM0dDhzdFpTSTVoS1QzdXBsZjg1d21xN0xEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0312', 'stationName': 'Vinhomes Nguyễn Chí Thanh - Hầm B4', 'stationAddress': 'Số 54A, đường Nguyễn Chí Thanh, phường Láng Thượng', 'latitude': 21.023491, 'longitude': 105.809402, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 5, 'totalEvse': 5
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 10, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 12, 'totalEvse': 12
+                    }
+                ], 'numberOfAvailableEvse': 27, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdEdtTXhHbkt0Zk5Lb1FuYlM0cXVjUktHQT09'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0027', 'stationName': 'Vincom Center Nguyễn Chí Thanh - Hầm B3', 'stationAddress': 'Hầm B3, Vincom Center Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh, phường Láng Thượng', 'latitude': 21.023161, 'longitude': 105.80954, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 8, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdE92S1M2aUZNTDRQK0VuYnl0NTlweGZISWcySVczbzl3U3V1QWY3dnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcytvQlRTVVU1ZVdMSVVuYkhrb3BaZ01TWWd5S1R6bzgxZjl1QU9xN2JiZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0311', 'stationName': 'Vincom Center Nguyễn Chí Thanh, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh', 'latitude': 21.023155, 'longitude': 105.80954, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 11, 'totalEvse': 13
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 20, 'totalEvse': 26
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 37, 'totalEvse': 44
+                    }
+                ], 'numberOfAvailableEvse': 68, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcE93S2hHeU1zZlhMdFluYnl0NTlweGZISWcySVczbzl3U3V1QWY3dnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcENZTWpTb0VzakxUczBuT240aHA1bGNSNDFvS21udDhBK3F2d0NwdXJQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdSszVndqWFZ0WFdQdGtuYWk1OG84Z05IdHhpS0RDNm8xU283RkdyNGVMZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0209', 'stationName': 'Khách sạn Somerset West Lake Hanoi', 'stationAddress': 'Khách sạn Somerset West Lake Hanoi, số 254 Thụy Khê', 'latitude': 21.04398, 'longitude': 105.818672, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGJwTmsrdVVaVGtEWVFuT3lZb3A1dGZIZHRpSzI2L293NnQ3MUdvdmVQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3lTS1I2eFVPWFJLc0FuUEgwcnBwc0pHWW8wZW1yczlRQ3B2QVgvdWJMZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdHVHSGhtR1hNZkpUdlFuT0NndDlabFlSNGcyTFd2dTkxUDE1d2V1dkxEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1024', 'stationName': 'Nhượng quyền 55 Dịch Vọng', 'stationAddress': '55 Dịch Vọng. phường Dịch Vọng, Quận Cầu Giấy, Hà Nội', 'latitude': 21.030874, 'longitude': 105.792351, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWVhS0RLelZOZnFHK0FuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc251Q2d5dUN1eVZTdTBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0674', 'stationName': 'Nhượng quyền Standard - Công ty Cổ phần phát triển Quang Phúc', 'stationAddress': 'Số 11, Ngõ 5, Đường Láng Hạ, Phường Thành Công', 'latitude': 21.021854, 'longitude': 105.819336, 'evsePowers': [
+                    {'type': 60000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0662', 'stationName': 'Bãi đỗ xe tư nhân 138B Giảng Võ', 'stationAddress': 'Số 138B, Phường Giảng Võ', 'latitude': 21.029112, 'longitude': 105.825745, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0850', 'stationName': 'NQ Tư Nhân Phạm Phi Khanh', 'stationAddress': 'Số 5 ngõ 40, Nghĩa Đô, Xuân La, Tây Hồ, Hà Nội', 'latitude': 21.050446, 'longitude': 105.795914, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdmJxQ0M2T0x2Q1RLdG9uTFhkNTVjdGVXb3hnY0dXNG9sUHA3QUM4NnI3QTkxcGY2NnNIMVE9PQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdldZS3dTektmTHhDK1VuTFhkNTVjdGVXb3hnY0dXNG9sUGl0RUQr'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1010', 'stationName': 'Nhượng Quyền TN Trần Hải Sơn', 'stationAddress': 'Số 67B Vũ Ngọc Phan, Láng Hạ Đống Đa, Hà Nội', 'latitude': 21.014582, 'longitude': 105.809586, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdFdHTlNpOVBzTERQYzBuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTdtVVN5Y0tmRFVUZUFuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdldtVVFtMlhNVHpGZU1uY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0928', 'stationName': 'Nhượng Quyền Tư Nhân Lã Anh Quân', 'stationAddress': 'Số Nhà 31, Ngõ 259, Yên Hoà, Cầu Giấy, Hà Nội', 'latitude': 21.021105, 'longitude': 105.792526, 'evsePowers': [
+                    {'type': 7400, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc2E1TFRxRUQrck9TY1VuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdU9MWGhpZksvSEhLZjRuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0717', 'stationName': 'Báo Lao Động', 'stationAddress': '6 Phạm Văn Bạch, P.Yên Hòa', 'latitude': 21.024214, 'longitude': 105.790009, 'evsePowers': [
+                    {'type': 120000, 'numberOfAvailableEvse': 3, 'totalEvse': 8
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcE9jVVJQZElQTGtEZlFuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdnU0TkN1Z0tjak1HTUluY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWlzVmdxSEE1TG1MdEVuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1143', 'stationName': 'Nhượng Quyền Tư Nhân Hoàng Đức Nghĩa', 'stationAddress': 'Ngõ 50 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội', 'latitude': 21.054972, 'longitude': 105.820381, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkt2RFJPckJaSERGZjBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0230', 'stationName': 'Chung cư Sky City Tower', 'stationAddress': 'Số 88, Đường Láng Hạ, phường Láng Hạ', 'latitude': 21.012674, 'longitude': 105.811806, 'evsePowers': [], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'evse': 'VinFast'
+            }
+        ]
+    },
+    {'code': 200000, 'data': [
+            {'locationId': 'C.HNO0126', 'stationName': 'Bãi đỗ xe Khách sạn La Thành', 'stationAddress': 'Bãi đỗ xe\xa0Khách sạn La Thành, số 226 Vạn Phúc, phường Liễu Giai', 'latitude': 21.033375, 'longitude': 105.819283, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdG02SFUydFBzM0tOWUFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0209', 'stationName': 'Khách sạn Somerset West Lake Hanoi', 'stationAddress': 'Khách sạn Somerset West Lake Hanoi, số 254 Thụy Khê', 'latitude': 21.04398, 'longitude': 105.818672, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    },
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 3, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGJwTmsrdVVaVGtEWVFuT3lZb3A1dGZIZHRpSzI2L293NnQ3MUdvdmVQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3lTS1I2eFVPWFJLc0FuUEgwcnBwc0pHWW8wZW1yczlRQ3B2QVgvdWJMZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdHVHSGhtR1hNZkpUdlFuT0NndDlabFlSNGcyTFd2dTkxUDE1d2V1dkxEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1161', 'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Toàn', 'stationAddress': 'Đội Nhân, Vĩnh Phúc, Ba Đình, Hà Nội', 'latitude': 21.041803, 'longitude': 105.81366, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3V5SlI2UEQ4YlJHOXNuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTYxQVJpa04rcnBLOEFuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0317', 'stationName': 'Vinhomes Metropolis, hầm B4', 'stationAddress': 'Hầm B4, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 17, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 17, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdk9kRWpQWEIvblVKdUFuUEg0dW9NOEtTNHBoSVREcnBnZW92UW1oNGJYVTRGMVU5ZVJGaWxEZXltZFg0V2wv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3VHVWdpL0U4SGtFczBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVU5ZThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXk3RkJxSkF1ZkhMTmduQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVg4dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXlVSVNTMUxlV1NSWTBuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRWMVc4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0316', 'stationName': 'Vinhomes Metropolis, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Metropolis, số 29 Liễu Giai, phường Ngọc Khánh', 'latitude': 21.031263, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 9, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 18, 'totalEvse': 18
+                    }
+                ], 'numberOfAvailableEvse': 29, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENjTndpQ0x1SEROOGNuWm4wcThabGVIWVkxZkQrODlnSCs3Z2I4N3VEZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkd0SXptV0xlTGFFOVFuQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlU5dThkd2dZPQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcGp2VjBTVU1kck9UUE1uQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGRlc5ZThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0025', 'stationName': 'Vincom Center Metropolis - Hầm B3', 'stationAddress': 'Cột M6, hầm B3, Vincom Center Metropolis, số 29, đường Liễu Giai, phường Ngọc Khánh', 'latitude': 21.03126, 'longitude': 105.814598, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 4, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWJxSFN1eU5OWDFOZkluQ25aMTh2NVNFTW8vUmpycDl3WDg3QUN2aDdiSTRGdFg4dThkd2dZPQ%3D%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0662', 'stationName': 'Bãi đỗ xe tư nhân 138B Giảng Võ', 'stationAddress': 'Số 138B, Phường Giảng Võ', 'latitude': 21.029112, 'longitude': 105.825745, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0121', 'stationName': 'Chung cư Bộ Kế hoạch và Đầu tư', 'stationAddress': 'Bãi đỗ xe mặt đất, chung cư Bộ Kế hoạch và Đầu tư, ngõ 1 Đông Quan, phường Quan Hoa', 'latitude': 21.038996, 'longitude': 105.805313, 'evsePowers': [
+                    {'type': 11000, 'numberOfAvailableEvse': 0, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': False, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdmV5Vmd5VkxQbm5LZlluYm4wc3I1MEtTNDgwZnpyczlRUDd2QVg2NjdMSjQwWU10YVk9', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdnVrWHhxd0x2RHRNTmtuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxEZXltZFgrM2Qv', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdUNwSVJqY0xlYm1HSVVuRTNaNzVjRkpFTmdrVFcyNHFFWGh0MTM0ditQVTRGMVU5ZVJGaWxYZXltZFgrM2Qv'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0674', 'stationName': 'Nhượng quyền Standard - Công ty Cổ phần phát triển Quang Phúc', 'stationAddress': 'Số 11, Ngõ 5, Đường Láng Hạ, Phường Thành Công', 'latitude': 21.021854, 'longitude': 105.819336, 'evsePowers': [
+                    {'type': 60000, 'numberOfAvailableEvse': 1, 'totalEvse': 2
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0313', 'stationName': 'Vincom Center Nguyễn Chí Thanh, hầm B5', 'stationAddress': 'Hầm B5, Vinhomes Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh', 'latitude': 21.023699, 'longitude': 105.809601, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 7, 'totalEvse': 7
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 12, 'totalEvse': 14
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 68, 'totalEvse': 69
+                    }
+                ], 'numberOfAvailableEvse': 87, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdXkwVVF5Sk5jajZETWNuYVM5N3BKNE9Ib2swS3pEcDlRNm91d1dvNGJmZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkNXRjBYUlV1YlNDc1luTzN3cnBNeGVUZDFrS0RpNy9GVDU2MU9yNmVmZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdm1FRFRlSUVkS1hFNEVuTzM0dDhzdFpTSTVoS1QzdXBsZjg1d21xN0xEZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0312', 'stationName': 'Vinhomes Nguyễn Chí Thanh - Hầm B4', 'stationAddress': 'Số 54A, đường Nguyễn Chí Thanh, phường Láng Thượng', 'latitude': 21.023491, 'longitude': 105.809402, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 5, 'totalEvse': 5
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 10, 'totalEvse': 10
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 12, 'totalEvse': 12
+                    }
+                ], 'numberOfAvailableEvse': 27, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdEdtTXhHbkt0Zk5Lb1FuYlM0cXVjUktHQT09'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1143', 'stationName': 'Nhượng Quyền Tư Nhân Hoàng Đức Nghĩa', 'stationAddress': 'Ngõ 50 Đặng Thai Mai, Quảng An, Tây Hồ, Hà Nội', 'latitude': 21.054972, 'longitude': 105.820381, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdkt2RFJPckJaSERGZjBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0027', 'stationName': 'Vincom Center Nguyễn Chí Thanh - Hầm B3', 'stationAddress': 'Hầm B3, Vincom Center Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh, phường Láng Thượng', 'latitude': 21.023161, 'longitude': 105.80954, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 2, 'totalEvse': 2
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 4, 'totalEvse': 4
+                    }
+                ], 'numberOfAvailableEvse': 8, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdE92S1M2aUZNTDRQK0VuYnl0NTlweGZISWcySVczbzl3U3V1QWY3dnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcytvQlRTVVU1ZVdMSVVuYkhrb3BaZ01TWWd5S1R6bzgxZjl1QU9xN2JiZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0311', 'stationName': 'Vincom Center Nguyễn Chí Thanh, hầm B3', 'stationAddress': 'Hầm B3, Vinhomes Nguyễn Chí Thanh, số 54, đường Nguyễn Chí Thanh', 'latitude': 21.023155, 'longitude': 105.80954, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 11, 'totalEvse': 13
+                    },
+                    {'type': 60000, 'numberOfAvailableEvse': 20, 'totalEvse': 26
+                    },
+                    {'type': 11000, 'numberOfAvailableEvse': 37, 'totalEvse': 44
+                    }
+                ], 'numberOfAvailableEvse': 68, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcE93S2hHeU1zZlhMdFluYnl0NTlweGZISWcySVczbzl3U3V1QWY3dnJiZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phcENZTWpTb0VzakxUczBuT240aHA1bGNSNDFvS21udDhBK3F2d0NwdXJQZnVCZ0I%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdSszVndqWFZ0WFdQdGtuYWk1OG84Z05IdHhpS0RDNm8xU283RkdyNGVMZnVCZ0I%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1296', 'stationName': 'Nhượng Quyền Tư nhân Lê Đình Dương ', 'stationAddress': 'Ngõ Thịnh Hào 2, Tôn Đức Thắng, Phường Hàng Bột, Đống Đa, Hà Nội', 'latitude': 21.023348, 'longitude': 105.831635, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 1, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Available', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc09IVmlXT05PM3RNc2NuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1226', 'stationName': 'Nhượng Quyền Tư nhân Cty Cổ Phần Chứng Khoán SSI', 'stationAddress': 'BT5+6 Khu BT 18 Đặng Thai Mai, Quảng An, Tây Hồ', 'latitude': 21.058994, 'longitude': 105.825798, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdStUSlVpTEY1SEtET3duY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdENMTlRTZExKRHFEY1FuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0850', 'stationName': 'NQ Tư Nhân Phạm Phi Khanh', 'stationAddress': 'Số 5 ngõ 40, Nghĩa Đô, Xuân La, Tây Hồ, Hà Nội', 'latitude': 21.050446, 'longitude': 105.795914, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdmJxQ0M2T0x2Q1RLdG9uTFhkNTVjdGVXb3hnY0dXNG9sUHA3QUM4NnI3QTkxcGY2NnNIMVE9PQ%3D%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdldZS3dTektmTHhDK1VuTFhkNTVjdGVXb3hnY0dXNG9sUGl0RUQr'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1010', 'stationName': 'Nhượng Quyền TN Trần Hải Sơn', 'stationAddress': 'Số 67B Vũ Ngọc Phan, Láng Hạ Đống Đa, Hà Nội', 'latitude': 21.014582, 'longitude': 105.809586, 'evsePowers': [
+                    {'type': 22000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdFdHTlNpOVBzTERQYzBuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTdtVVN5Y0tmRFVUZUFuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdldtVVFtMlhNVHpGZU1uY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO1024', 'stationName': 'Nhượng quyền 55 Dịch Vọng', 'stationAddress': '55 Dịch Vọng. phường Dịch Vọng, Quận Cầu Giấy, Hà Nội', 'latitude': 21.030874, 'longitude': 105.792351, 'evsePowers': [
+                    {'type': 30000, 'numberOfAvailableEvse': 0, 'totalEvse': 1
+                    }
+                ], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': True, 'workingTimeDescription': '24/7', 'depotStatus': 'AllBusy', 'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdWVhS0RLelZOZnFHK0FuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc251Q2d5dUN1eVZTdTBuY0hWbzhBPT0%3D'
+                ], 'evse': 'VinFast'
+            },
+            {'locationId': 'C.HNO0230', 'stationName': 'Chung cư Sky City Tower', 'stationAddress': 'Số 88, Đường Láng Hạ, phường Láng Hạ', 'latitude': 21.012674, 'longitude': 105.811806, 'evsePowers': [], 'numberOfAvailableEvse': 0, 'isPublic': True, 'isFreeParking': False, 'workingTimeDescription': '24/7', 'depotStatus': 'Maintaining', 'evse': 'VinFast'
+            }
+        ]
+    }
+]

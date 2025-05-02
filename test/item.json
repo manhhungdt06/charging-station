@@ -1,0 +1,21 @@
+{
+    '_id': calculate_id(locationId, latitude, longitude),
+    'locationId': 'C.HNO1161', 
+    'stationName': 'Nhượng Quyền Tư Nhân Nguyễn Đức Toàn', 
+    'stationAddress': 'Đội Nhân, Vĩnh Phúc, Ba Đình, Hà Nội', 
+    'latitude': 21.041803, 
+    'longitude': 105.81366, 
+    'evsePowers': [
+        {
+            'type': 22000, 'numberOfAvailableEvse': 1, 'totalEvse': 1
+        }
+    ], 
+    'numberOfAvailableEvse': 1, 
+    'isPublic': True, 
+    'isFreeParking': True, 
+    'workingTimeDescription': '24/7', 
+    'depotStatus': 'Available', 
+    'media': ['media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phc3V5SlI2UEQ4YlJHOXNuY0hWbzhBPT0%3D', 'media?file=ZnpMUzgrMUF2Q05Edm5TOGszdHdhU0JUWHpjWkdlMjFzM3g2ckdzMm5OdU56UjNRSjBxM2lZVE5aOEhhdkJ6L1RYeFdvUGd5REhmK1NaQXBoS0lkTExBd0dTa2phdTYxQVJpa04rcnBLOEFuY0hWbzhBPT0%3D'
+    ],
+    'evse': 'VinFast'
+}
