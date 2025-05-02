@@ -138,7 +138,7 @@ for district in districts:
                     longitude = item.get('longitude', 0)
                     
                     # # Skip if already processed this station
-                    # doc_id = calculate_id(location_id, latitude, longitude)
+                    doc_id = calculate_id(location_id, latitude, longitude)
                     # if doc_id in processed_stations:
                     #     continue
                     
