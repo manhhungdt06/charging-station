@@ -2,6 +2,8 @@ import requests
 import hashlib
 import pymongo
 import time
+import datetime
+
 from pymongo import MongoClient
 from requests.exceptions import RequestException, Timeout
 
@@ -137,7 +139,7 @@ for district in districts:
                     
                     mongodb_doc = {
                         '_id': doc_id,
-                        'time': current_time,
+                        'current_time': current_time,
                         'district_id': calculate_id(*list(each_location.values())),
                         'district': each_location['address'],
                         'locationId': location_id,
@@ -157,6 +159,7 @@ for district in districts:
                         'numberOfAvailableEvse': item.get('numberOfAvailableEvse', 0),
                         'depotStatus': item.get('depotStatus', ''),
                     }
+                    print(mongodb_doc)
                     
                     for db_attempt in range(5):
                         try:
