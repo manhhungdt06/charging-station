@@ -72,8 +72,6 @@ client = MongoClient('mongodb://localhost:27017/')
 db = client['evcs_db']
 collection = db['charging_stations']
 
-# processed_stations = set()
-
 for district in districts:
     cookies = {}
     params = {
@@ -123,50 +121,41 @@ for district in districts:
                 
             station_data = station_response.json()
             
-            # Process data
             if 'data' in station_data:
                 for item in station_data['data']:
-                    # Remove 'media' field if exists
                     if 'media' in item:
                         del item['media']
                     
-                    # Extract essential fields for MongoDB document
                     location_id = item.get('locationId', '')
                     station_name = item.get('stationName', '')
                     station_address = item.get('stationAddress', '')
                     latitude = item.get('latitude', 0)
                     longitude = item.get('longitude', 0)
                     
-                    # # Skip if already processed this station
                     doc_id = calculate_id(location_id, latitude, longitude)
-                    # if doc_id in processed_stations:
-                    #     continue
                     
-                    # processed_stations.add(doc_id)
-                    
-                    # Extract district from original location data
-                    current_district = district
-                    
-                    # Prepare MongoDB document
                     mongodb_doc = {
                         '_id': doc_id,
+                        'district_id': calculate_id(*list(each_location.values())),
+                        'district': each_location['address'],
                         'locationId': location_id,
                         'stationName': station_name,
                         'stationAddress': station_address,
                         'latitude': latitude,
                         'longitude': longitude,
-                        'evsePowers': item.get('evsePowers', []),
-                        'numberOfAvailableEvse': item.get('numberOfAvailableEvse', 0),
                         'isPublic': item.get('isPublic', False),
                         'isFreeParking': item.get('isFreeParking', False),
                         'workingTimeDescription': item.get('workingTimeDescription', ''),
-                        'depotStatus': item.get('depotStatus', ''),
                         'evse': item.get('evse', ''),
-                        'district_id': calculate_id(*list(each_location.values())),
-                        'district': each_location['address']
+                        
+                        # change if the investor upgrades, charging stations, also need to be updated continuously
+                        'evsePowers': item.get('evsePowers', []),
+                        
+                        # Important fields need to be updated 30 minutes
+                        'numberOfAvailableEvse': item.get('numberOfAvailableEvse', 0),
+                        'depotStatus': item.get('depotStatus', ''),
                     }
                     
-                    # Insert into MongoDB
                     for db_attempt in range(5):
                         try:
                             collection.update_one(
@@ -174,7 +163,7 @@ for district in districts:
                                 {'$set': mongodb_doc},
                                 upsert=True
                             )
-                            print(f"Inserted/updated station {location_id} in {current_district}")
+                            print(f"Inserted/updated station {location_id}")
                             break
                         except pymongo.errors.DuplicateKeyError:
                             print(f"Station {location_id} already exists in database")
@@ -188,5 +177,3 @@ for district in districts:
                         except Exception as e:
                             print(f"Error inserting station {location_id}: {e}")
                             break
-
-# print(f"Total unique stations processed: {len(processed_stations)}")
