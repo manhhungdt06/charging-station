@@ -64,11 +64,11 @@ def main():
 
     # Schedule jobs at :00 and :30 of every hour
     schedule.every().hour.at(":00").do(run_collection_job)
-    schedule.every().hour.at(":30").do(run_collection_job)
+    # schedule.every().hour.at(":30").do(run_collection_job)
 
-    # Optionally run initial job immediately (if needed)
-    logging.info("Running initial data collection job")
-    run_collection_job()
+    # # Optionally run initial job immediately (if needed)
+    # logging.info("Running initial data collection job")
+    # run_collection_job()
 
     # Keep the script running and execute scheduled jobs
     while True:

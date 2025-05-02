@@ -159,7 +159,7 @@ for district in districts:
                         'numberOfAvailableEvse': item.get('numberOfAvailableEvse', 0),
                         'depotStatus': item.get('depotStatus', ''),
                     }
-                    print(mongodb_doc)
+                    # print(mongodb_doc)
                     
                     for db_attempt in range(5):
                         try:
@@ -168,10 +168,10 @@ for district in districts:
                                 {'$set': mongodb_doc},
                                 upsert=True
                             )
-                            print(f"Inserted/updated station {location_id}")
+                            # print(f"Inserted/updated station {location_id}")
                             break
                         except pymongo.errors.DuplicateKeyError:
-                            print(f"Station {location_id} already exists in database")
+                            # print(f"Station {location_id} already exists in database")
                             break
                         except pymongo.errors.AutoReconnect:
                             if db_attempt < 2:
