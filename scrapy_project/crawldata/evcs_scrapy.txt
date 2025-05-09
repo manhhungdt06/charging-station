@@ -1,0 +1,339 @@
+Directory structure:
+└── crawldata/
+    ├── __init__.py
+    ├── functions.py
+    ├── items.py
+    ├── middlewares.py
+    ├── pipelines.py
+    ├── settings.py
+    └── spiders/
+        ├── __init__.py
+        └── evcs.py
+
+================================================
+File: __init__.py
+================================================
+
+
+
+================================================
+File: functions.py
+================================================
+from datetime import datetime
+from pathlib import Path
+from dateutil import parser
+
+PROJECT = Path(__file__).resolve().parent.parent
+NOW = datetime.now()
+CRAWL_DATE = NOW.strftime('%Y-%m-%d')
+
+from sys import path
+path.append(str(PROJECT.absolute()))
+parent_folder = Path(__file__).parent.resolve().parent
+
+
+def calculate_id(*args):
+    to_hash = "_".join(str(arg) for arg in args)
+    import hashlib
+    hashed = hashlib.md5(to_hash.encode()).hexdigest()
+    return hashed[:24]
+     
+
+districts = [
+    "Quận Ba Đình",
+    "Quận Cầu Giấy",
+    "Quận Hoàn Kiếm",
+    "Quận Hai Bà Trưng",
+    "Quận Hoàng Mai",
+    "Quận Đống Đa",
+    "Quận Tây Hồ",
+    "Quận Thanh Xuân",
+    "Quận Bắc Từ Liêm",
+    "Quận Hà Đông",
+    "Quận Long Biên",
+    "Quận Nam Từ Liêm",
+    "Huyện Ba Vì",
+    "Huyện Chương Mỹ",
+    "Huyện Đan Phượng",
+    "Huyện Đông Anh",
+    "Huyện Gia Lâm",
+    "Huyện Hoài Đức",
+    "Huyện Mê Linh",
+    "Huyện Mỹ Đức",
+    "Huyện Phú Xuyên",
+    "Huyện Phúc Thọ",
+    "Huyện Quốc Oai",
+    "Huyện Sóc Sơn",
+    "Huyện Thạch Thất",
+    "Huyện Thanh Oai",
+    "Huyện Thanh Trì",
+    "Huyện Thường Tín",
+    "Huyện Ứng Hòa",
+    "Thị xã Sơn Tây"
+]
+
+
+
+================================================
+File: items.py
+================================================
+from scrapy import Item, Field
+
+class PriceItem(Item):
+    _id = Field()
+    ticker = Field()
+    time = Field()
+    open = Field()
+    high = Field()
+    low = Field()
+    close = Field()
+    volume = Field()
+
+
+================================================
+File: middlewares.py
+================================================
+# Define here the models for your spider middleware
+#
+# See documentation in:
+# https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+
+from scrapy import signals
+
+# useful for handling different item types with a single interface
+from itemadapter import is_item, ItemAdapter
+
+
+class CrawldataSpiderMiddleware:
+    # Not all methods need to be defined. If a method is not defined,
+    # scrapy acts as if the spider middleware does not modify the
+    # passed objects.
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        # This method is used by Scrapy to create your spiders.
+        s = cls()
+        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
+        return s
+
+    def process_spider_input(self, response, spider):
+        # Called for each response that goes through the spider
+        # middleware and into the spider.
+
+        # Should return None or raise an exception.
+        return None
+
+    def process_spider_output(self, response, result, spider):
+        # Called with the results returned from the Spider, after
+        # it has processed the response.
+
+        # Must return an iterable of Request, or item objects.
+        for i in result:
+            yield i
+
+    def process_spider_exception(self, response, exception, spider):
+        # Called when a spider or process_spider_input() method
+        # (from other spider middleware) raises an exception.
+
+        # Should return either None or an iterable of Request or item objects.
+        pass
+
+    def process_start_requests(self, start_requests, spider):
+        # Called with the start requests of the spider, and works
+        # similarly to the process_spider_output() method, except
+        # that it doesn’t have a response associated.
+
+        # Must return only requests (not items).
+        for r in start_requests:
+            yield r
+
+    def spider_opened(self, spider):
+        spider.logger.info("Spider opened: %s" % spider.name)
+
+
+class CrawldataDownloaderMiddleware:
+    # Not all methods need to be defined. If a method is not defined,
+    # scrapy acts as if the downloader middleware does not modify the
+    # passed objects.
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        # This method is used by Scrapy to create your spiders.
+        s = cls()
+        crawler.signals.connect(s.spider_opened, signal=signals.spider_opened)
+        return s
+
+    def process_request(self, request, spider):
+        # Called for each request that goes through the downloader
+        # middleware.
+
+        # Must either:
+        # - return None: continue processing this request
+        # - or return a Response object
+        # - or return a Request object
+        # - or raise IgnoreRequest: process_exception() methods of
+        #   installed downloader middleware will be called
+        return None
+
+    def process_response(self, request, response, spider):
+        # Called with the response returned from the downloader.
+
+        # Must either;
+        # - return a Response object
+        # - return a Request object
+        # - or raise IgnoreRequest
+        return response
+
+    def process_exception(self, request, exception, spider):
+        # Called when a download handler or a process_request()
+        # (from other downloader middleware) raises an exception.
+
+        # Must either:
+        # - return None: continue processing this exception
+        # - return a Response object: stops process_exception() chain
+        # - return a Request object: stops process_exception() chain
+        pass
+
+    def spider_opened(self, spider):
+        spider.logger.info("Spider opened: %s" % spider.name)
+
+
+
+================================================
+File: pipelines.py
+================================================
+from itemadapter import ItemAdapter
+from pymongo import MongoClient
+from pymongo.errors import DuplicateKeyError
+
+class CrawldataPipeline:
+    def __init__(self, mongodb_uri, mongodb_db):
+        self.mongodb_uri = mongodb_uri
+        self.mongodb_db = mongodb_db
+        self.client = None
+        self.db = None
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(
+            mongodb_uri=crawler.settings.get('MONGODB_URI'),
+            mongodb_db=crawler.settings.get('MONGODB_DATABASE') # default to 'vn30' in settings.py
+        )
+
+    def open_spider(self, spider):
+        self.client = MongoClient(self.mongodb_uri)
+        self.db = self.client[self.mongodb_db]
+
+    def close_spider(self, spider):
+        self.client.close()
+
+    def process_item(self, item, spider):
+        try:
+            pass
+            item_dict = ItemAdapter(item).asdict()
+
+            # collection.update_one(
+            #     {'_id': item_dict['_id']},
+            #     {'$set': item_dict},
+            #     upsert=True
+            # )
+            
+        except DuplicateKeyError:
+            spider.logger.warning(f"Duplicate item found: {item_dict['_id']}")
+        except Exception as e:
+            spider.logger.error(f"Error processing item: {str(e)}")
+            
+        return item
+
+
+================================================
+File: settings.py
+================================================
+BOT_NAME = "crawldata"
+
+SPIDER_MODULES = (
+    "crawldata.spiders",
+    "crawldata.spiders.strategies",
+)
+NEWSPIDER_MODULE = "crawldata.spiders"
+
+URLLENGTH_LIMIT = 50000
+HTTPERROR_ALLOW_ALL = True
+
+#CONCURRENT_REQUESTS = 32
+DOWNLOAD_DELAY = 5
+RANDOMIZE_DOWNLOAD_DELAY = True
+# CONCURRENT_REQUESTS_PER_DOMAIN = 1
+CONCURRENT_REQUESTS_PER_IP = 1
+
+TELNETCONSOLE_ENABLED = False
+
+ROTATING_PROXY_LIST_PATH = '/home/hung/proxies.txt'
+ROTATING_PROXY_PAGE_RETRY_TIMES=200
+
+DOWNLOADER_MIDDLEWARES = {
+    'rotating_proxies.middlewares.RotatingProxyMiddleware': 610, 
+    'rotating_proxies.middlewares.BanDetectionMiddleware': 620,
+}
+
+ITEM_PIPELINES = {
+   "crawldata.pipelines.CrawldataPipeline": 300,
+}
+
+LOG_ENABLED = True
+LOG_LEVEL = 'ERROR'
+LOG_FORMAT = '%(levelname)s: %(message)s'
+
+REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
+FEED_EXPORT_ENCODING = "utf-8"
+
+MONGODB_URI = "mongodb://127.0.0.1:27017"
+MONGODB_DATABASE = "evevcs_db" # collection 'charging_stations'
+
+
+================================================
+File: spiders/__init__.py
+================================================
+# This package will contain the spiders of your Scrapy project
+#
+# Please refer to the documentation for information on how to create and manage
+# your spiders.
+
+
+
+================================================
+File: spiders/evcs.py
+================================================
+from crawldata.functions import *
+from scrapy import Spider, Request, FormRequest
+
+
+class EvcsSpider(Spider):
+    name = "evcs"
+    custom_settings = {
+        "LOG_FILE": f"{parent_folder}/log/{parent_folder.name}_{name}.log",
+    }
+
+    def __init__(self, *args, **kwargs):
+        super(EvcsSpider, self).__init__(*args, **kwargs)
+        self.headers = {
+            "accept": "*/*",
+            "accept-language": "en-US,en;q=0.9",
+            "priority": "u=1, i",
+            "referer": "https://evcs.vn/",
+            "sec-ch-ua": '"Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"',
+            "sec-ch-ua-mobile": "?1",
+            "sec-ch-ua-platform": '"Android"',
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
+        }
+
+    def start_requests(self):
+        pass
+
+    def parse(self, response):
+        pass
+

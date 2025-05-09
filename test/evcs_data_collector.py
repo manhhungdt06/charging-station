@@ -7,6 +7,10 @@ import datetime
 from pymongo import MongoClient
 from requests.exceptions import RequestException, Timeout
 
+
+NOW = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+
+
 def calculate_id(*args):
     to_hash = "_".join(str(arg) for arg in args)
     hashed = hashlib.md5(to_hash.encode()).hexdigest()
@@ -134,7 +138,7 @@ for district in districts:
                     latitude = item.get('latitude', 0)
                     longitude = item.get('longitude', 0)
                     
-                    current_time = time.strftime("%Y-%m-%d %H:%M", time.localtime())
+                    current_time = NOW
                     doc_id = calculate_id(current_time, location_id, latitude, longitude)
                     
                     mongodb_doc = {
@@ -159,7 +163,7 @@ for district in districts:
                         'numberOfAvailableEvse': item.get('numberOfAvailableEvse', 0),
                         'depotStatus': item.get('depotStatus', ''),
                     }
-                    # print(mongodb_doc)
+                    print(mongodb_doc)
                     
                     for db_attempt in range(5):
                         try:
