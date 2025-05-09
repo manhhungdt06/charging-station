@@ -26,15 +26,15 @@ class CrawldataPipeline:
 
     def process_item(self, item, spider):
         item_dict = ItemAdapter(item).asdict()
-        print(item_dict)
-        # try:
-        #     self.db['charging_stations'].update_one(
-        #         {'_id': item_dict['_id']},
-        #         {'$set': item_dict},
-        #         upsert=True
-        #     )
-        # except DuplicateKeyError:
-        #     spider.logger.warning(f"Duplicate item found: {item_dict['_id']}")
-        # except Exception as e:
-        #     spider.logger.error(f"Error processing item: {str(e)}")
-        # return item
+        # print(item_dict)
+        try:
+            self.db['charging_stations'].update_one(
+                {'_id': item_dict['_id']},
+                {'$set': item_dict},
+                upsert=True
+            )
+        except DuplicateKeyError:
+            spider.logger.warning(f"Duplicate item found: {item_dict['_id']}")
+        except Exception as e:
+            spider.logger.error(f"Error processing item: {str(e)}")
+        return item
