@@ -28,6 +28,7 @@ class EvcsSpider(Spider):
 
     def start_requests(self):
         for district in districts:
+            # print(f"Requesting {district}")
             yield Request(
                 url="https://evcs.vn/location",
                 method="GET",
@@ -39,6 +40,7 @@ class EvcsSpider(Spider):
             )
 
     def parse(self, response, district=None):
+        # print(response.meta.get("address"))
         data = json.loads(response.text)
         for each_location in data:
             if ", Hà Nội" in each_location["address"][-8:].title():
@@ -61,10 +63,13 @@ class EvcsSpider(Spider):
                     body=json.dumps({"latitude": lat, "longitude": long}),
                     callback=self.parse_station,
                     meta=meta,
+                    dont_filter=True,
                 )
 
     def parse_station(self, response):
+        # print(response.meta)
         result = json.loads(response.text)
+        # print(len(result.get("data", [])))
         for item in result.get("data", []):
             if "media" in item:
                 del item["media"]

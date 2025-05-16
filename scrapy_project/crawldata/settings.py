@@ -37,4 +37,4 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 MONGODB_URI = "mongodb://127.0.0.1:27017"
-MONGODB_DATABASE = "evevcs_db" # collection 'charging_stations'
+MONGODB_DATABASE = "evcs_db_new" # collection 'charging_stations'

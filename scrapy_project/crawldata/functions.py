@@ -5,7 +5,7 @@ import hashlib
 
 PROJECT = Path(__file__).resolve().parent.parent
 NOW = datetime.now()
-CRAWL_DATE = NOW.strftime('%Y-%m-%d')
+CRAWL_DATE = NOW.strftime('%Y-%m-%d %H:%M')
 
 from sys import path
 path.append(str(PROJECT.absolute()))

@@ -27,6 +27,7 @@ class CrawldataPipeline:
     def process_item(self, item, spider):
         item_dict = ItemAdapter(item).asdict()
         # print(item_dict)
+        # print('-'*20)
         try:
             self.db['charging_stations'].update_one(
                 {'_id': item_dict['_id']},
